@@ -1,4 +1,3 @@
 export class Avatar { 
-	public id:number;
-	public name:string;
+    public url: string;
 }

@@ -22,11 +22,22 @@ export class HomeComponent extends HTMLElement {
 
     private _bind() {
         this._homeService.get().then((results:string) => {
-            this._pagedList = toPageListFromInMemory(JSON.parse(results) as Array<Avatar>, this._pageNumber, this._pageSize);
-            for (var i = 0; i < this._pagedList.data.length; i++) {
-
-            }
+            this._entities = JSON.parse(results) as Array<Avatar>;
+            this._render();
         });
+    }
+
+    private _render() {
+        this._pagedList = toPageListFromInMemory(this._entities, this._pageNumber, this._pageSize);
+        this._totalPagesElement.textContent = JSON.stringify(this._pagedList.totalPages);
+        this._currentPageElement.textContent = JSON.stringify(this._pageNumber);
+
+        this._containerElement.innerHTML = "";
+        for (var i = 0; i < this._pagedList.data.length; i++) {
+            const el = document.createElement("img");
+            el.src = this._pagedList.data[i].url;
+            this._containerElement.appendChild(el);
+        }
     }
 
     private _addEventListeners() {
@@ -35,12 +46,14 @@ export class HomeComponent extends HTMLElement {
     }
 
     disconnectedCallback() {
-
+        this._nextElement.removeEventListener("click", this.onNext);
+        this._previousElement.removeEventListener("click", this.onPrevious);
     }
     
-    private _pageSize: number;
-    private _pageNumber: number;
+    private _pageSize: number = 4;
+    private _pageNumber: number = 1;
     private _pagedList: IPagedList<Avatar>;
+    private _entities: Array<Avatar>;
 
     public onNext(e: Event) {
         e.stopPropagation();
@@ -50,7 +63,7 @@ export class HomeComponent extends HTMLElement {
         } else {
             this._pageNumber = this._pageNumber + 1;
         }
-        this._bind();
+        this._render();
     }
 
     public onPrevious(e: Event) {
@@ -61,8 +74,14 @@ export class HomeComponent extends HTMLElement {
         } else {
             this._pageNumber = this._pageNumber - 1;
         }
-        this._bind();
+        this._render();
     }
+
+    private get _currentPageElement(): HTMLElement { return this.querySelector(".current-page") as HTMLElement; }
+
+    private get _totalPagesElement(): HTMLElement { return this.querySelector(".total-pages") as HTMLElement; }
+
+    private get _containerElement(): HTMLElement { return this.querySelector(".container") as HTMLElement; }
 
     private get _nextElement(): HTMLElement { return this.querySelector(".next") as HTMLElement; }
 
