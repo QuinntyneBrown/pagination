@@ -1,5 +1,4 @@
-﻿import { IPagedList } from "./ipaged-list.d";
-import { validatePagePropertiesAndGetSkipCount } from "./validate-page-properties-and-get-skip-count";
+﻿import { validatePagePropertiesAndGetSkipCount } from "./validate-page-properties-and-get-skip-count";
 import { PagingConfig } from "./paging-config.model";
 import { PagedList } from "./paged-list.model";
 

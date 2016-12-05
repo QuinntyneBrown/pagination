@@ -1,10 +1,5 @@
-﻿declare interface IPagedList<T> {
-    data: Array<T>;
-    page: number;
-    pageSize: number;
-    totalCount: number;
-    totalPages: number;
-}
+﻿/// <reference path="app/pagination/ipaged-list.d.ts" />
+
 
 declare interface ActivatedRoute {
     name: string;

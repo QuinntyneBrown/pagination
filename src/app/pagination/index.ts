@@ -1,6 +1,5 @@
-/// <reference path="ipaged-list.d.ts" />
-
 export * from "./paged-list.model";
+export * from "./paginated.component";
 export * from "./paging-config.model";
 export * from "./to-paged-list-from-in-memory";
 export * from "./to-paged-list";

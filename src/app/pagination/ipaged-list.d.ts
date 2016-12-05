@@ -1,4 +1,4 @@
-﻿export interface IPagedList<T> {
+﻿declare interface IPagedList<T> {
     data: Array<T>;
     page: number;
     pageSize: number;
