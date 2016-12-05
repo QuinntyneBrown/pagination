@@ -1,9 +1,9 @@
 import { fetch } from "../utilities";
 import { Avatar } from "./avatar.model";
 
-export class HomeService {
+export class AvatarService {
     
-    private static _instance: HomeService;
+    private static _instance: AvatarService;
 
     public static get Instance() {
         this._instance = this._instance || new this();
@@ -22,5 +22,5 @@ export class HomeService {
             { url: "/src/images/avatar_8.png" }
         ]));
     }
-    
+  
 }

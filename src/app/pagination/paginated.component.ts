@@ -57,4 +57,3 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
     private get _previousElement(): HTMLElement { return this.querySelector(this._previousCssClass) as HTMLElement; }
 }
 
-document.addEventListener("DOMContentLoaded",() => window.customElements.define(`ce-paginated`,PaginatedComponent));

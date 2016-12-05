@@ -1,5 +1,4 @@
-import { HomeService } from "./home.service";
-import { Avatar } from "./avatar.model";
+import { AvatarService, Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
 
 const template = require("./home.component.html");
@@ -7,7 +6,7 @@ const styles = require("./home.component.scss");
 
 export class HomeComponent extends PaginatedComponent<Avatar> {
     constructor(
-        private _homeService: HomeService = HomeService.Instance
+        private _homeService: AvatarService = AvatarService.Instance
     ) {
         super(4,1,".next",".previous");
     }
