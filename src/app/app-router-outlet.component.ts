@@ -9,8 +9,7 @@ export class AppRouterOutletComponent extends RouterOutlet {
         this.setRoutes([
             { path: "/", name: "home" }          
         ] as any);
-        
-
+                
         super.connectedCallback();
     }
 

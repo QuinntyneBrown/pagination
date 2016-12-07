@@ -4,3 +4,4 @@
     baseUrl: "",
     useUrlRouting: true
 };
+

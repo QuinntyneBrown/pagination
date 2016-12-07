@@ -43,3 +43,4 @@ interface CustomElementRegistry {
 interface ElementDefinitionOptions {
     extends: string;
 }
+

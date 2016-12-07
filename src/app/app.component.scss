@@ -15,19 +15,20 @@ body {
 ce-app {
 
     display:block;
+    height:100vh;
     
     .container {
-        display:block;
-        margin: 0px auto;
-        padding-top:30px;
-        padding-bottom:30px;
-        max-width:1280px;
+        height:100%;        
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
 
     .router-outlet {        
         display:block;
         position:relative;        
-        margin:0 15px;
+        margin:0;
+        padding:0;
         max-width: 100%;
     }
 }

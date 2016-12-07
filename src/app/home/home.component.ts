@@ -1,27 +1,27 @@
 import { AvatarService, Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
+import { fetch } from "../utilities"
+
 
 const template = require("./home.component.html");
 const styles = require("./home.component.scss");
 
 export class HomeComponent extends PaginatedComponent<Avatar> {
     constructor(
-        private _homeService: AvatarService = AvatarService.Instance
+        private _avatarService: AvatarService = AvatarService.Instance
     ) {
-        super(4,1,".next",".previous");
+        super(1,1,".next",".previous");
     }
 
     connectedCallback() {        
         super.connectedCallback({ template, styles });        
     }
 
-    public bind() {
-        this._homeService.get().then((results:string) => {
-            this.entities = JSON.parse(results) as Array<Avatar>;
-            this.render();
-        });
+    public async bind() {
+        this.entities = await this._avatarService.get();
+        this.render();        
     }
-
+    
     public render() {
         this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
         this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);

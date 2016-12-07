@@ -10,8 +10,8 @@ export class AvatarService {
         return this._instance;
     }
 
-    public get(): Promise<string> {
-        return Promise.resolve(JSON.stringify([
+    public async get(): Promise<Array<Avatar>> {
+        return Promise.resolve([
             { url: "/src/images/avatar_1.png" },
             { url: "/src/images/avatar_2.png" },
             { url: "/src/images/avatar_3.png" },
@@ -20,7 +20,7 @@ export class AvatarService {
             { url: "/src/images/avatar_6.png" },
             { url: "/src/images/avatar_7.png" },
             { url: "/src/images/avatar_8.png" }
-        ]));
+        ]);
     }
   
 }
