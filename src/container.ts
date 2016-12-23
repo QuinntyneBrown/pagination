@@ -1,9 +1,9 @@
-﻿import { types } from "./types";
+﻿import { TokenRegistry } from "./token-registry";
 import { ReflectiveInjector, Inject } from "@angular/core";
 
 export class Container {
     constructor() {
-        this._injector = ReflectiveInjector.resolveAndCreate(types);
+        this._injector = ReflectiveInjector.resolveAndCreate(TokenRegistry.tokens);
     }
 
     private static _instance: Container;

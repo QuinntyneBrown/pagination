@@ -5,11 +5,11 @@ import { isArray, camelCaseToSnakeCase, Log } from "../utilities";
 
 export abstract class RouterOutlet {
     constructor(private _nativeHTMLElement: HTMLElement, public _router: Router = Router.Instance) {
-        this.connectedCallback();
+        this._onRouteChanged = this._onRouteChanged.bind(this);
     }
 
     public connectedCallback() {
-        this._router.addEventListener(this._onRouteChanged.bind(this));       
+        this._router.addEventListener(this._onRouteChanged);       
     }
 
     public use(middleware: RouterMiddleware) {
@@ -45,7 +45,7 @@ export abstract class RouterOutlet {
             }
         }
 
-        if (!nextView) {
+        if (!nextView) {            
             nextView = document.createElement(`ce-${options.routeName}`);
 
             if (nextView) {
@@ -68,7 +68,7 @@ export abstract class RouterOutlet {
         window.scrollTo(0,0);
     }
 
-    public setRoutes(routes: Array<Route>) {
+    public setRoutes(routes: Array<Route>) {       
         this._router.setRoutes(routes);
     }
 

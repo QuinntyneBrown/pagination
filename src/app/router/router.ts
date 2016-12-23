@@ -47,7 +47,7 @@ export class Router {
     }
 
     private _onChanged(state: { route?: string, routeSegments?: Array<any> }) {
-
+        
         let routeParams = {};
         let match = false;
         if (state.routeSegments)
@@ -110,7 +110,7 @@ export class Router {
         this._routeParams = routeParams;
     }
 
-    public _addEventListeners() {
+    public _addEventListeners() {        
         window.onpopstate = () => this._onChanged({ route: window.location.pathname });
     }
 
@@ -122,4 +122,3 @@ export class Router {
     private _callbacks: Array<any> = [];
     private static _instance;
 }
-

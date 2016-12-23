@@ -5,14 +5,10 @@ export class AppRouterOutletComponent extends RouterOutlet {
         super(el);
     }
 
-    connectedCallback() { 
+    connectedCallback() {                 
         this.setRoutes([
             { path: "/", name: "home" }          
-        ] as any);
-                
+        ] as any);                
         super.connectedCallback();
     }
-
 }
-
-customElements.define(`ce-app-router-oulet`,AppRouterOutletComponent);

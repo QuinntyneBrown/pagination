@@ -6,12 +6,13 @@ const styles = require("./app.component.scss");
 export class AppComponent extends HTMLElement {
 
     constructor() {
-        super();
+        super();        
     }
 
-    connectedCallback() {
-        this.innerHTML = `<style>${styles}</style>${template}`;
+    connectedCallback() {        
+        this.innerHTML = `<style>${styles}</style>${template}`;        
         this.routerOutlet = new AppRouterOutletComponent(this.routerOutletElement);
+        this.routerOutlet.connectedCallback();
     }
 
     routerOutlet: AppRouterOutletComponent;
