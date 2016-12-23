@@ -1,15 +1,15 @@
 import { AvatarService, Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
 import { fetch } from "../utilities";
-import { Container } from "../../container";
+import { IocContainer } from "../../ioc-container";
 
 const template = require("./home.component.html");
 const styles = require("./home.component.scss");
 
 export class HomeComponent extends PaginatedComponent<Avatar> {
-    constructor(private _avatarService: AvatarService) {
+    constructor(private _avatarService: AvatarService = IocContainer.resolve(AvatarService)) {
         super(1, 1, ".next", ".previous");
-        this._avatarService = Container.resolve(AvatarService);
+        
     }
 
     connectedCallback() {        
@@ -27,7 +27,7 @@ export class HomeComponent extends PaginatedComponent<Avatar> {
         this._currentPageElement.textContent = JSON.stringify(this.pageNumber);
 
         this._containerElement.innerHTML = "";
-        for (var i = 0; i < this.pagedList.data.length; i++) {
+        for (let i = 0; i < this.pagedList.data.length; i++) {
             const el = document.createElement("img");
             el.src = this.pagedList.data[i].url;
             this._containerElement.appendChild(el);
