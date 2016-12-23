@@ -1,23 +1,25 @@
 import { AvatarService, Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
-import { fetch } from "../utilities"
-
+import { fetch } from "../utilities";
+import { ReflectiveInjector } from "@angular/core";
 
 const template = require("./home.component.html");
 const styles = require("./home.component.scss");
 
 export class HomeComponent extends PaginatedComponent<Avatar> {
-    constructor(
-        private _avatarService: AvatarService = AvatarService.Instance
-    ) {
-        super(1,1,".next",".previous");
+    constructor( private _avatarService: AvatarService) {
+        super(1, 1, ".next", ".previous");
+
+        var injector = ReflectiveInjector.resolveAndCreate([AvatarService]);
+        this._avatarService = injector.get(AvatarService);
+        
     }
 
     connectedCallback() {        
         super.connectedCallback({ template, styles });        
     }
 
-    public async bind() {
+    public async bind() {        
         this.entities = await this._avatarService.get();
         this.render();        
     }

@@ -1,6 +1,8 @@
+import { Injectable } from "@angular/core";
 import { fetch } from "../utilities";
 import { Avatar } from "./avatar.model";
 
+@Injectable()
 export class AvatarService {
     
     private static _instance: AvatarService;
