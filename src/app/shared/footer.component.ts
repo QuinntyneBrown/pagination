@@ -36,4 +36,4 @@ export class FooterComponent extends HTMLElement {
     }
 }
 
-document.addEventListener("DOMContentLoaded",() => window.customElements.define(`ce-footer`,FooterComponent));
+customElements.define(`ce-footer`,FooterComponent);

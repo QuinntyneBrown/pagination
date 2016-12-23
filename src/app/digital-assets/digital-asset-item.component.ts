@@ -36,4 +36,4 @@ export class DigitalAssetItemComponent extends HTMLElement {
     }
 }
 
-document.addEventListener("DOMContentLoaded",() => window.customElements.define(`ce-digital-asset-item`,DigitalAssetItemComponent));
+customElements.define(`ce-digital-asset-item`,DigitalAssetItemComponent);
