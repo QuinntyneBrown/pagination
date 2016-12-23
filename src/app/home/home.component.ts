@@ -9,9 +9,7 @@ const styles = require("./home.component.scss");
 export class HomeComponent extends PaginatedComponent<Avatar> {
     constructor(private _avatarService: AvatarService) {
         super(1, 1, ".next", ".previous");
-        alert("?");
         this._avatarService = Container.resolve(AvatarService);
-        
     }
 
     connectedCallback() {        

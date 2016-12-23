@@ -1,5 +1,5 @@
 ﻿import { TokenRegistry } from "./token-registry";
-import { ReflectiveInjector, Inject } from "@angular/core";
+import { ReflectiveInjector } from "@angular/core";
 
 export class Container {
     constructor() {
@@ -9,7 +9,7 @@ export class Container {
     private static _instance: Container;
 
     private static get Instance(): Container {
-        this._instance = this._instance || new Container();
+        this._instance = this._instance || new this();
         return this._instance;
     }
 
