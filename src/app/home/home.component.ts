@@ -1,6 +1,5 @@
 import { AvatarService, Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
-import { fetch } from "../utilities";
 import { IocContainer } from "../../ioc-container";
 
 const template = require("./home.component.html");

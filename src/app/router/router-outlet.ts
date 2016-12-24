@@ -2,9 +2,10 @@
 import { Router } from "./router";
 import { Route } from "./route";
 import { isArray, camelCaseToSnakeCase, Log } from "../utilities";
+import { IocContainer } from "../../ioc-container";
 
 export abstract class RouterOutlet {
-    constructor(private _nativeHTMLElement: HTMLElement, public _router: Router = Router.Instance) {
+    constructor(private _nativeHTMLElement: HTMLElement, public _router: Router = IocContainer.resolve(Router)) {
         this._onRouteChanged = this._onRouteChanged.bind(this);
     }
 
@@ -17,8 +18,7 @@ export abstract class RouterOutlet {
     }
 
     private _middleware: Array<RouterMiddleware> = [];
-
-    @Log()
+    
     public _onRouteChanged(options: any) { 
         
         let nextView: HTMLElement = null;

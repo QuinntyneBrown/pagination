@@ -1,22 +1,19 @@
 import { Storage, isNumeric, Log } from "../utilities";
 import { Route } from "./route";
-import { environment } from "../environment";
+import { Environment } from "../environment";
+import { IocContainer } from "../../ioc-container";
+import { Injectable } from "@angular/core";
 
 export const routerKeys = {
     currentRoute: "[Router] current route"
 }
 
+@Injectable()
 export class Router {
-    constructor(
-        private _routes: Array<Route> = [],
-        private _storage: Storage = Storage.Instance,
-        private _environment: { useUrlRouting: boolean } = environment
+    constructor(        
+        private _storage: Storage,
+        private _environment: Environment
     ) { }
-
-    public static get Instance(): Router {
-        this._instance = this._instance || new this();
-        return this._instance;
-    }
 
     public get activatedRoute(): ActivatedRoute {
         return Object.assign(this._routes.find(r => r.name === this._routeName), { routeParams: this._routeParams });
@@ -120,5 +117,5 @@ export class Router {
     private _routePath: string;
     private _routeParams;
     private _callbacks: Array<any> = [];
-    private static _instance;
+    private _routes: Array<Route> = [];
 }
