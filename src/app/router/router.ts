@@ -2,7 +2,7 @@ import { Storage, isNumeric, Log } from "../utilities";
 import { Route } from "./route";
 import { Environment } from "../environment";
 import { IocContainer } from "../../ioc-container";
-import { Injectable } from "@angular/core";
+import { Injectable } from 'injection-js';
 
 export const routerKeys = {
     currentRoute: "[Router] current route"

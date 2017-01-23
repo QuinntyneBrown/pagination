@@ -1,5 +1,5 @@
 ﻿import { STORAGE_KEY } from "./constants";
-import { Injectable } from "@angular/core";
+import { Injectable } from 'injection-js';
 
 @Injectable()
 export class StorageConfiguration {

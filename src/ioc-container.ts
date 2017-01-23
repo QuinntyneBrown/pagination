@@ -1,5 +1,5 @@
 ﻿import { TokenRegistry } from "./token-registry";
-import { ReflectiveInjector } from "@angular/core";
+import { ReflectiveInjector } from 'injection-js';
 
 export class IocContainer {
     constructor() {

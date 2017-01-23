@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from 'injection-js';
 import { Avatar } from "./avatar.model";
 
 @Injectable()
