@@ -1,6 +1,7 @@
-@import "../../styles/base/index";
+@import "../../styles/breakpoints";
 
-ce-home {
+ce-avatar-rotator {
+
 	display:block;
     width:400px;
     h2 {
@@ -35,3 +36,19 @@ ce-home {
         }
     }
 }
+
+@media only screen and (min-width: $screen-sm-min) { 
+
+
+}
+
+@media only screen and (min-width: $screen-md-min) { 
+
+
+}
+
+@media only screen and (min-width: $screen-lg-min) { 
+
+
+}
+

@@ -1,5 +1,5 @@
 export * from "./avatars";
-export * from "./home";
+export * from "./landing";
 export * from "./pagination";
 export * from "./router";
 export * from "./shared";

@@ -7,7 +7,7 @@ export class AppRouterOutletComponent extends RouterOutlet {
 
     connectedCallback() {                 
         this.setRoutes([
-            { path: "/", name: "home" }          
+            { path: "/", name: "landing-page" }          
         ] as any);                
         super.connectedCallback();
     }

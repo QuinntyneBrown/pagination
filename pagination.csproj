@@ -7,7 +7,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{57DB8F84-D269-42DF-B7DF-2A5085908BB2}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,7 +23,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -81,17 +83,17 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\digital-assets\digital-asset-item.component.html">
-      <DependentUpon>digital-asset-item.component.ts</DependentUpon>
+    <Content Include="src\app\avatars\avatar-rotator.component.html">
+      <DependentUpon>avatar-rotator.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\digital-assets\digital-asset-item.component.scss">
-      <DependentUpon>digital-asset-item.component.ts</DependentUpon>
+    <Content Include="src\app\avatars\avatar-rotator.component.scss">
+      <DependentUpon>avatar-rotator.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\home\home.component.html">
-      <DependentUpon>home.component.ts</DependentUpon>
+    <Content Include="src\app\landing\landing-page.component.html">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\home\home.component.scss">
-      <DependentUpon>home.component.ts</DependentUpon>
+    <Content Include="src\app\landing\landing-page.component.scss">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\shared\footer.component.html">
       <DependentUpon>footer.component.ts</DependentUpon>
@@ -113,16 +115,11 @@
     <Content Include="src\images\avatar_6.png" />
     <Content Include="src\images\avatar_7.png" />
     <Content Include="src\images\avatar_8.png" />
+    <None Include="src\styles\_breakpoints.scss" />
+    <None Include="src\styles\_variables.scss" />
     <Content Include="tsconfig.json" />
-    <Content Include="typedoc.json" />
     <Content Include="typings.json" />
     <Content Include="src\app\pagination\paged-list.scss" />
-    <Content Include="src\styles\_base.scss" />
-    <Content Include="src\styles\base\entity-item.scss" />
-    <Content Include="src\styles\base\entity-list.scss" />
-    <Content Include="src\styles\base\select.scss" />
-    <Content Include="src\styles\base\view-card.scss" />
-    <Content Include="src\styles\base\_index.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -190,8 +187,8 @@
     <TypeScriptCompile Include="src\app\utilities\wait.ts" />
     <TypeScriptCompile Include="src\custom-typings.d.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\home\home.component.ts" />
-    <TypeScriptCompile Include="src\app\home\index.ts" />
+    <TypeScriptCompile Include="src\app\landing\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\landing\index.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\shared\header.component.ts" />
     <TypeScriptCompile Include="src\app\shared\footer.component.ts" />
@@ -201,9 +198,7 @@
     <TypeScriptCompile Include="src\app\pagination\paginated.component.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar.service.ts" />
     <TypeScriptCompile Include="src\app\avatars\index.ts" />
-    <TypeScriptCompile Include="src\app\digital-assets\index.ts" />
-    <TypeScriptCompile Include="src\app\digital-assets\digital-asset.model.ts" />
-    <TypeScriptCompile Include="src\app\digital-assets\digital-asset-item.component.ts" />
+    <TypeScriptCompile Include="src\app\avatars\avatar-rotator.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -228,7 +223,8 @@
           <IISUrl>http://localhost:51305/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
