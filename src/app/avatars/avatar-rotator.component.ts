@@ -8,7 +8,6 @@ const styles = require("./avatar-rotator.component.scss");
 export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
     constructor() {
         super(1, 1, ".next", ".previous");
-
     }
 
     static get observedAttributes() {

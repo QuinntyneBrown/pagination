@@ -9,12 +9,11 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
     
     connectedCallback(options: { template: string, styles: string }) {
         this.innerHTML = `<style>${options.styles}</style> ${options.template}`;
-        this.addEventListeners();
+        this.setEventListeners();
         this.bind();
     }
     
-
-    public addEventListeners() {
+    public setEventListeners() {
         this._nextElement.addEventListener("click", this.onNext);
         this._previousElement.addEventListener("click", this.onPrevious);
     }
@@ -56,4 +55,3 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
 
     private get _previousElement(): HTMLElement { return this.querySelector(this._previousCssClass) as HTMLElement; }
 }
-
