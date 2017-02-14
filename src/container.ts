@@ -1,14 +1,14 @@
 ﻿import { TokenRegistry } from "./token-registry";
-import { ReflectiveInjector } from 'injection-js';
+import { ReflectiveInjector, OpaqueToken } from 'injection-js';
 
-export class IocContainer {
+export class Container {
     constructor() {
         this._injector = ReflectiveInjector.resolveAndCreate(TokenRegistry.tokens);
     }
 
-    private static _instance: IocContainer;
+    private static _instance: Container;
 
-    private static get Instance(): IocContainer {
+    private static get Instance(): Container {
         this._instance = this._instance || new this();
         return this._instance;
     }

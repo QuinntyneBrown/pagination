@@ -1,5 +1,11 @@
 ﻿/// <reference path="app/pagination/ipaged-list.d.ts" />
 
+declare module "offline-plugin/runtime" {
+
+    var offlineRuntime;
+
+    export default offlineRuntime;
+}
 
 declare interface ActivatedRoute {
     name: string;

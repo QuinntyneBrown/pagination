@@ -1,7 +1,9 @@
 import { AppRouterOutletComponent } from "./app-router-outlet.component";
+import offlineRuntime from "offline-plugin/runtime";
 
 const template = require("./app.component.html");
 const styles = require("./app.component.scss");
+
 
 export class AppComponent extends HTMLElement {
 

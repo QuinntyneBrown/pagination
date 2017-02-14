@@ -2,10 +2,10 @@
 import { Router } from "./router";
 import { Route } from "./route";
 import { isArray, camelCaseToSnakeCase, Log } from "../utilities";
-import { IocContainer } from "../../ioc-container";
+import { Container } from "../../container";
 
 export abstract class RouterOutlet {
-    constructor(private _nativeHTMLElement: HTMLElement, public _router: Router = IocContainer.resolve(Router)) {
+    constructor(private _nativeHTMLElement: HTMLElement, public _router: Router = Container.resolve(Router)) {
         this._onRouteChanged = this._onRouteChanged.bind(this);
     }
 

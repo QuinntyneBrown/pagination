@@ -1,12 +1,12 @@
 import { AvatarService } from "../avatars";
-import { IocContainer } from "../../ioc-container";
+import { Container } from "../../container";
 
 const template = require("./landing-page.component.html");
 const styles = require("./landing-page.component.scss");
 
 export class LandingPageComponent extends HTMLElement {
     constructor(
-        private _avatarService: AvatarService = IocContainer.resolve(AvatarService)
+        private _avatarService: AvatarService = Container.resolve(AvatarService)
     ) {
         super();
     }

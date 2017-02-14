@@ -1,7 +1,7 @@
 import { Storage, isNumeric, Log } from "../utilities";
 import { Route } from "./route";
 import { Environment } from "../environment";
-import { IocContainer } from "../../ioc-container";
+import { Container } from "../../container";
 import { Injectable } from 'injection-js';
 
 export const routerKeys = {

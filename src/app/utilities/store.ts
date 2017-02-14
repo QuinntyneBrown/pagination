@@ -1,5 +1,5 @@
 ﻿import { Storage } from "./storage";
-import { IocContainer } from "../../ioc-container";
+import { Container } from "../../container";
 
 export const STORE_KEY = "[Store] store key";
 
@@ -9,7 +9,7 @@ export interface Action {
 }
 
 export class Store {
-    constructor(private _storage: Storage = IocContainer.resolve(Storage)) {
+    constructor(private _storage: Storage = Container.resolve(Storage)) {
         this._state = _storage.get({ name: STORE_KEY }) || {};
     }
     

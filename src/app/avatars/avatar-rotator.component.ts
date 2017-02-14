@@ -1,6 +1,6 @@
 import { Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
-import { IocContainer } from "../../ioc-container";
+import { Container } from "../../container";
 
 const template = require("./avatar-rotator.component.html");
 const styles = require("./avatar-rotator.component.scss");
@@ -8,6 +8,7 @@ const styles = require("./avatar-rotator.component.scss");
 export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
     constructor() {
         super(1, 1, ".next", ".previous");
+        this.onKeyUp = this.onKeyUp.bind(this);
     }
 
     static get observedAttributes() {
@@ -15,11 +16,20 @@ export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
     }
 
     connectedCallback() {
-        super.connectedCallback({ template, styles });
+        super.connectedCallback({ template, styles });  
+        this.setEventListeners();      
     }
 
     public bind() {  
           
+    }
+
+    public setEventListeners() {
+        window.addEventListener("onkeyup", this.onKeyUp);
+    }
+
+    public onKeyUp() {
+        alert("works?");
     }
 
     public render() {
