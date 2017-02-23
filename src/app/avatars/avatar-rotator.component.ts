@@ -8,7 +8,6 @@ const styles = require("./avatar-rotator.component.scss");
 export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
     constructor() {
         super(1, 1, ".next", ".previous");
-        this.onKeyUp = this.onKeyUp.bind(this);
     }
 
     static get observedAttributes() {
@@ -17,7 +16,7 @@ export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
 
     connectedCallback() {
         super.connectedCallback({ template, styles });  
-        this.setEventListeners();      
+        this.setEventListeners();              
     }
 
     public bind() {  
@@ -25,13 +24,9 @@ export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
     }
 
     public setEventListeners() {
-        window.addEventListener("onkeyup", this.onKeyUp);
+        
     }
-
-    public onKeyUp() {
-        alert("works?");
-    }
-
+    
     public render() {
         this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
         this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);

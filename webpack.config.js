@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const BabiliPlugin = require("babili-webpack-plugin")
-const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -27,7 +26,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new BabiliPlugin({ comments: false, sourceMap: false }),
-        new OfflinePlugin()
+        //new BabiliPlugin({ comments: false, sourceMap: false }),
+
     ]
 };
