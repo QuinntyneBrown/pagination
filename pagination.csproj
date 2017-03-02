@@ -135,9 +135,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\utilities\constructable.ts" />
+    <TypeScriptCompile Include="src\app\utilities\constructor.ts" />
     <TypeScriptCompile Include="src\app\utilities\store.ts" />
-    <TypeScriptCompile Include="src\token-registry.ts" />
+    <TypeScriptCompile Include="src\service-collection.ts" />
     <TypeScriptCompile Include="src\container.ts" />
     <TypeScriptCompile Include="src\app\app-router-outlet.component.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />

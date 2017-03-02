@@ -1284,13 +1284,13 @@ function stringify(token) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__token_registry__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service_collection__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_injection_js__ = __webpack_require__(45);
 
 
 class Container {
     constructor() {
-        this._injector = __WEBPACK_IMPORTED_MODULE_1_injection_js__["b" /* ReflectiveInjector */].resolveAndCreate(__WEBPACK_IMPORTED_MODULE_0__token_registry__["a" /* TokenRegistry */].tokens);
+        this._injector = __WEBPACK_IMPORTED_MODULE_1_injection_js__["b" /* ReflectiveInjector */].resolveAndCreate(new __WEBPACK_IMPORTED_MODULE_0__service_collection__["a" /* ServiceCollection */]());
     }
     static get Instance() {
         this._instance = this._instance || new this();
@@ -7230,18 +7230,20 @@ const wait = (ms) => new Promise(r => setTimeout(r, ms));
 
 
 
-class TokenRegistry {
-    static get tokens() {
-        return [
+class ServiceCollection extends Array {
+    constructor() {
+        super();
+        this.addRange = (values) => values.map(value => this.push(value));
+        this.addRange([
             __WEBPACK_IMPORTED_MODULE_0__app_avatars_avatar_service__["a" /* AvatarService */],
             __WEBPACK_IMPORTED_MODULE_2__app_environment__["a" /* Environment */],
             __WEBPACK_IMPORTED_MODULE_3__app_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_1__app_utilities__["a" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_1__app_utilities__["b" /* StorageConfiguration */]
-        ];
+        ]);
     }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = TokenRegistry;
+/* harmony export (immutable) */ __webpack_exports__["a"] = ServiceCollection;
 
 
 

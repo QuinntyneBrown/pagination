@@ -1,9 +1,9 @@
-﻿import { TokenRegistry } from "./token-registry";
+﻿import { ServiceCollection } from "./service-collection";
 import { ReflectiveInjector, OpaqueToken } from 'injection-js';
 
 export class Container {
     constructor() {
-        this._injector = ReflectiveInjector.resolveAndCreate(TokenRegistry.tokens);
+        this._injector = ReflectiveInjector.resolveAndCreate(new ServiceCollection());
     }
 
     private static _instance: Container;
