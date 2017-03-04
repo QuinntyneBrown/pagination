@@ -73,6 +73,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\app.js" />
     <Content Include="index.html" />
     <Content Include="libs\native-shim.js" />
     <Content Include="packages.config" />
@@ -116,6 +117,9 @@
     <Content Include="src\images\avatar_6.png" />
     <Content Include="src\images\avatar_7.png" />
     <Content Include="src\images\avatar_8.png" />
+    <Content Include="dist\app.js.map" />
+    <None Include="Properties\PublishProfiles\ce-pagination - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ce-pagination - Web Deploy.pubxml" />
     <None Include="src\styles\_breakpoints.scss" />
     <None Include="src\styles\_variables.scss" />
     <Content Include="tsconfig.json" />
