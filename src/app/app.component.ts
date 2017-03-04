@@ -21,4 +21,4 @@ export class AppComponent extends HTMLElement {
     get routerOutletElement() { return this.querySelector(".router-outlet") as HTMLElement; }
 }
 
-customElements.define(`ce-app`, AppComponent);
+window.customElements.define(`ce-app`, AppComponent);

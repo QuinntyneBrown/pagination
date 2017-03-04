@@ -59,4 +59,4 @@ export class AvatarRotatorComponent extends PaginatedComponent<Avatar> {
 
 }
 
-customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);
+window.customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

@@ -21,11 +21,13 @@
     "webpack": "^2.2.0-rc.2"
   },
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.0.0-alpha.3",
     "core-js": "^2.4.1",
     "injection-js": "^1.0.0",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.2",
     "sass-loader": "^4.0.2",
+    "webcomponents.js": "^0.7.24",
     "zone.js": "^0.7.4"
   }
 }
