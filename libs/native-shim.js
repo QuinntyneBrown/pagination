@@ -17,13 +17,13 @@
  * Because `new.target` is a syntax error in VMs that don't support it, this
  * shim must only be loaded in browsers that do.
  */
-(() => {
-  let origHTMLElement = HTMLElement;
+(function () {
+  var origHTMLElement = HTMLElement;
   // TODO(justinfagnani): Tests!!
   window.HTMLElement = function() {
     // prefer new.target for elements that call super() constructors or
     // Reflect.construct directly
-    let newTarget = new.target || this.constructor;
+    var newTarget = new.target || this.constructor;
     return Reflect.construct(origHTMLElement, [], newTarget);
   }
   HTMLElement.prototype = Object.create(origHTMLElement.prototype, {
