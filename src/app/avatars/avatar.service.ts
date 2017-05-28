@@ -2,7 +2,10 @@ import { Injectable } from 'injection-js';
 import { Avatar } from "./avatar.model";
 
 @Injectable()
-export class AvatarService {    
+export class AvatarService {   
+    constructor() {
+        alert("?");
+    } 
     public get(): Promise<Array<Avatar>> {
         return Promise.resolve([
             { url: "/src/images/avatar_1.png" },

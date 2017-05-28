@@ -4,13 +4,7 @@ import offlineRuntime from "offline-plugin/runtime";
 const template = require("./app.component.html");
 const styles = require("./app.component.scss");
 
-
 export class AppComponent extends HTMLElement {
-
-    constructor() {
-        super();        
-    }
-
     connectedCallback() {        
         this.innerHTML = `<style>${styles}</style>${template}`;        
         this.routerOutlet = new AppRouterOutletComponent(this.routerOutletElement);
@@ -21,4 +15,4 @@ export class AppComponent extends HTMLElement {
     get routerOutletElement() { return this.querySelector(".router-outlet") as HTMLElement; }
 }
 
-window.customElements.define(`ce-app`, AppComponent);
+customElements.define(`ce-app`, AppComponent);

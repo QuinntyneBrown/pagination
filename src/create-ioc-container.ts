@@ -4,7 +4,7 @@ import { Environment } from "./app/environment";
 import { Router } from "./app/router";
 
 export const createIocContainer = () => [
-    AvatarService,
+    { provide: AvatarService, useValue: new AvatarService() },
     Environment,
     Router,
     Storage,
