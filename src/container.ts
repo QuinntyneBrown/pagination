@@ -8,13 +8,13 @@ export class Container {
 
     private static _instance: Container;
 
-    private static get Instance(): Container {
+    public static get instance(): Container {
         this._instance = this._instance || new this();
         return this._instance;
     }
 
-    public static resolve(token: any) {
-        return this.Instance._injector.get(token);
+    public static resolve(token: any) {        
+        return this.instance._injector.get(token);
     }
 
     private _injector: ReflectiveInjector;

@@ -9,14 +9,6 @@
         super.setRequestHeader(header, value);
     }
     
-    public set onload(callback:any) {
-        super.onload = (ev:Event) => {
-            Http.pendingRequests--;
-
-            Http._callbacks.forEach(cb => cb(Http.pendingRequests));
-            callback(ev);
-        }
-    }
 
     public send(data: any) {
         Http.pendingRequests++;

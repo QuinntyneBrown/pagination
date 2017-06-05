@@ -1,6 +1,6 @@
 import { toPageListFromInMemory } from "./";
 
-export abstract class PaginatedComponent<T> extends HTMLElement {
+export abstract class PaginatedComponent<T = any> extends HTMLElement {
     constructor(public pageSize: number, public pageNumber:number, private _nextCssClass:string, private _previousCssClass: string) {
         super();
         this.onNext = this.onNext.bind(this);
