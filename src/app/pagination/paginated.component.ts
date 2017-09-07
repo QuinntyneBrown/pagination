@@ -1,6 +1,7 @@
-import { toPageListFromInMemory } from "./";
+import { toPageListFromInMemory } from "./to-paged-list-from-in-memory";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
-export abstract class PaginatedComponent<T = any> extends HTMLElement {
+export abstract class PaginatedComponent<T> extends HTMLElement {
     constructor(public pageSize: number, public pageNumber:number, private _nextCssClass:string, private _previousCssClass: string) {
         super();
         this.onNext = this.onNext.bind(this);
@@ -16,7 +17,11 @@ export abstract class PaginatedComponent<T = any> extends HTMLElement {
     }
     
     public setEventListeners() {
-
+        this.entities$.subscribe(x => {
+            this.pageNumber = 1;
+            this.entities = x;
+            this.render();
+        });
     }
 
     public abstract bind();
@@ -29,6 +34,8 @@ export abstract class PaginatedComponent<T = any> extends HTMLElement {
     public abstract render();
     public pagedList: IPagedList<T>;
     public entities: Array<T>;
+
+    public entities$: BehaviorSubject<Array<T>> = new BehaviorSubject([] as Array<T>);
 
     public onNext(e: Event) {        
         e.stopPropagation();

@@ -1,23 +1,19 @@
 {
   "compileOnSave": false,
-  "buildOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": false,
     "moduleResolution": "node",
-    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "types": [ ]
-  },
-  "filesGlob": [
-    "./src/**/*.ts",
-    "src/custom-typings.d.ts",
-    "typings/index.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "target": "es2015",
+    "strict": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016",
+      "dom"
+    ]
+  }
 }

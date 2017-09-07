@@ -1,11 +1,9 @@
 import { Injectable } from 'injection-js';
 import { Avatar } from "./avatar.model";
+import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class AvatarService {   
-    constructor() {
-        alert("?");
-    } 
     public get(): Promise<Array<Avatar>> {
         return Promise.resolve([
             { url: "/src/images/avatar_1.png" },

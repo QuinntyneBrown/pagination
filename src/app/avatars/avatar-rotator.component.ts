@@ -5,7 +5,7 @@ import { Container } from "../../container";
 const template = require("./avatar-rotator.component.html");
 const styles = require("./avatar-rotator.component.scss");
 
-export class AvatarRotatorComponent extends PaginatedComponent {
+export class AvatarRotatorComponent extends PaginatedComponent<any> {
     constructor() {
         super(1, 1, ".next", ".previous");
         

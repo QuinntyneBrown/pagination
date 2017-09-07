@@ -2,7 +2,7 @@
 
 declare module "offline-plugin/runtime" {
 
-    var offlineRuntime;
+    var offlineRuntime:any;
 
     export default offlineRuntime;
 }
@@ -25,6 +25,6 @@ declare interface RouteChangeOptions {
     nextRoute?: ActivatedRoute;
 }
 
-declare var Quill;
+declare var Quill:any;
 
 declare var rome: any;

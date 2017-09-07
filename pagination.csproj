@@ -75,7 +75,6 @@
   <ItemGroup>
     <Content Include="dist\app.js" />
     <Content Include="index.html" />
-    <Content Include="libs\native-shim.js" />
     <Content Include="packages.config" />
     <Content Include=".gitignore" />
     <Content Include="package.json" />
