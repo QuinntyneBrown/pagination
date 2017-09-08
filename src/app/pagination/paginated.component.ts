@@ -5,7 +5,8 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
     constructor(public pageSize: number, public pageNumber:number, private _nextCssClass:string, private _previousCssClass: string) {
         super();
         this.onNext = this.onNext.bind(this);
-        this.onPrevious = this.onPrevious.bind(this);           
+        this.onPrevious = this.onPrevious.bind(this);    
+        this.onEntitiesChanged = this.onEntitiesChanged.bind(this);
     }
     
     connectedCallback(options: { template: string, styles: string }) {        
@@ -17,11 +18,7 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
     }
     
     public setEventListeners() {
-        this.entities$.subscribe(x => {
-            this.pageNumber = 1;
-            this.entities = x;
-            this.render();
-        });
+        this.entities$.subscribe(this.onEntitiesChanged);
     }
 
     public abstract bind();
@@ -36,6 +33,12 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
     public entities: Array<T>;
 
     public entities$: BehaviorSubject<Array<T>> = new BehaviorSubject([] as Array<T>);
+
+    public onEntitiesChanged(entities: Array<T>) {
+        this.pageNumber = 1;
+        this.entities = entities;
+        this.render();
+    }
 
     public onNext(e: Event) {        
         e.stopPropagation();

@@ -3892,6 +3892,7 @@ class PaginatedComponent extends HTMLElement {
         this.entities$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
         this.onNext = this.onNext.bind(this);
         this.onPrevious = this.onPrevious.bind(this);
+        this.onEntitiesChanged = this.onEntitiesChanged.bind(this);
     }
     connectedCallback(options) {
         this.innerHTML = `<style>${options.styles}</style> ${options.template}`;
@@ -3901,15 +3902,16 @@ class PaginatedComponent extends HTMLElement {
         this.bind();
     }
     setEventListeners() {
-        this.entities$.subscribe(x => {
-            this.pageNumber = 1;
-            this.entities = x;
-            this.render();
-        });
+        this.entities$.subscribe(this.onEntitiesChanged);
     }
     disconnectedCallback() {
         this._nextElement.removeEventListener("click", this.onNext);
         this._previousElement.removeEventListener("click", this.onPrevious);
+    }
+    onEntitiesChanged(entities) {
+        this.pageNumber = 1;
+        this.entities = entities;
+        this.render();
     }
     onNext(e) {
         e.stopPropagation();
