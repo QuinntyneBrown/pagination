@@ -3827,12 +3827,16 @@ var Reflect;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pagination__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
+
 
 const template = __webpack_require__(56);
 const styles = __webpack_require__(57);
 class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["a" /* PaginatedComponent */] {
     constructor() {
         super(1, 1, ".next", ".previous");
+        this._avatars$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
     }
     static get observedAttributes() {
         return ["avatars"];
@@ -3841,8 +3845,7 @@ class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["
         super.connectedCallback({ template, styles });
         this.setEventListeners();
     }
-    bind() {
-    }
+    bind() { this._avatars$.subscribe(this.onEntitiesChanged); }
     setEventListeners() {
     }
     render() {
@@ -3859,8 +3862,7 @@ class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
             case "avatars":
-                this.entities = JSON.parse(newValue);
-                this.render();
+                this._avatars$.next(JSON.parse(newValue));
                 break;
         }
     }

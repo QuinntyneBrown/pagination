@@ -1,6 +1,7 @@
 import { Avatar } from "../avatars";
 import { toPageListFromInMemory, PaginatedComponent } from "../pagination";
 import { Container } from "../../container";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 const template = require("./avatar-rotator.component.html");
 const styles = require("./avatar-rotator.component.scss");
@@ -11,6 +12,8 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
         
     }
 
+    private _avatars$: BehaviorSubject<any> = new BehaviorSubject([]);
+
     static get observedAttributes() {
         return ["avatars"];
     }
@@ -20,10 +23,9 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
         this.setEventListeners();              
     }
 
-    public bind() {  
-          
-    }
+    public bind() { this._avatars$.subscribe(this.onEntitiesChanged); }
 
+    
     public setEventListeners() {
         
     }
@@ -44,8 +46,7 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
             case "avatars":                
-                this.entities = JSON.parse(newValue);
-                this.render();
+                this._avatars$.next(JSON.parse(newValue));                
                 break;
         }
     }

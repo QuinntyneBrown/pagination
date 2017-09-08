@@ -34,7 +34,7 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
 
     public entities$: BehaviorSubject<Array<T>> = new BehaviorSubject([] as Array<T>);
 
-    public onEntitiesChanged(entities: Array<T>) {
+    public onEntitiesChanged(entities: Array<T>) {        
         this.pageNumber = 1;
         this.entities = entities;
         this.render();
