@@ -85,11 +85,12 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\avatars\avatar-rotator.component.html">
-      <DependentUpon>avatar-rotator.component.ts</DependentUpon>
+    <Content Include="src\app\avatars\avatar-filter-input.component.css">
+      <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </Content>
+    <Content Include="src\app\avatars\avatar-rotator.component.html" />
     <Content Include="src\app\avatars\avatar-rotator.component.scss">
-      <DependentUpon>avatar-rotator.component.ts</DependentUpon>
+      <DependentUpon>avatar-rotator.component.html</DependentUpon>
     </Content>
     <Content Include="src\app\landing\landing-page.component.html">
       <DependentUpon>landing-page.component.ts</DependentUpon>
@@ -130,12 +131,19 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="src\app\avatars\avatar-filter-input.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\avatars\avatar-filter-input.component.ts">
+      <DependentUpon>avatar-filter-input.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\avatars\avatar-rotator.component.ts">
+      <DependentUpon>avatar-rotator.component.html</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\utilities\constructor.ts" />
     <TypeScriptCompile Include="src\app\utilities\store.ts" />
     <TypeScriptCompile Include="src\create-ioc-container.ts" />
@@ -200,7 +208,6 @@
     <TypeScriptCompile Include="src\app\pagination\paginated.component.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar.service.ts" />
     <TypeScriptCompile Include="src\app\avatars\index.ts" />
-    <TypeScriptCompile Include="src\app\avatars\avatar-rotator.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

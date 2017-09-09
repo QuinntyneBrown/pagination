@@ -951,12 +951,15 @@ Router = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_rotator_component__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__ = __webpack_require__(109);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_model__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_component__ = __webpack_require__(42);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_service__ = __webpack_require__(24);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__avatar_service__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_model__ = __webpack_require__(58);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_service__ = __webpack_require__(24);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__avatar_service__["a"]; });
+
 
 
 
@@ -1400,14 +1403,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 let AvatarService = class AvatarService {
     get() {
         return Promise.resolve([
-            { url: "/src/images/avatar_1.png" },
-            { url: "/src/images/avatar_2.png" },
-            { url: "/src/images/avatar_3.png" },
-            { url: "/src/images/avatar_4.png" },
-            { url: "/src/images/avatar_5.png" },
-            { url: "/src/images/avatar_6.png" },
-            { url: "/src/images/avatar_7.png" },
-            { url: "/src/images/avatar_8.png" }
+            { name: "", url: "/src/images/avatar_1.png" },
+            { name: "", url: "/src/images/avatar_2.png" },
+            { name: "", url: "/src/images/avatar_3.png" },
+            { name: "", url: "/src/images/avatar_4.png" },
+            { name: "", url: "/src/images/avatar_5.png" },
+            { name: "", url: "/src/images/avatar_6.png" },
+            { name: "", url: "/src/images/avatar_7.png" },
+            { name: "", url: "/src/images/avatar_8.png" }
         ]);
     }
 };
@@ -6665,13 +6668,13 @@ class RouterOutlet {
 /* 97 */
 /***/ (function(module, exports) {
 
-module.exports = "<ce-avatar-rotator></ce-avatar-rotator>";
+module.exports = "<ce-avatar-filter-input></ce-avatar-filter-input>\r\n<ce-avatar-rotator></ce-avatar-rotator>";
 
 /***/ }),
 /* 98 */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "ce-avatar-filter-input {\n  margin: 0px 0px 40px 0px; }\n"
 
 /***/ }),
 /* 99 */
@@ -6817,6 +6820,72 @@ module.exports = "<div class=\"container\">\r\n    <ce-header></ce-header>\r\n  
 /***/ (function(module, exports) {
 
 module.exports = ":root {\n  font-family: Montserrat,sans-serif;\n  width: 100%;\n  padding: 0;\n  margin: 0; }\n\nbody {\n  height: 100vh;\n  margin: 0;\n  padding: 0;\n  background-color: #f4f4f4; }\n\nce-app {\n  display: block;\n  height: 100vh; }\n  ce-app .container {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n  ce-app .router-outlet {\n    display: block;\n    position: relative;\n    margin: 0;\n    padding: 0;\n    max-width: 100%; }\n"
+
+/***/ }),
+/* 109 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+const template = document.createElement("template");
+const html = __webpack_require__(110);
+const css = __webpack_require__(111);
+class AvatarFilterInputComponent extends HTMLElement {
+    constructor() {
+        super();
+    }
+    static get observedAttributes() {
+        return [];
+    }
+    connectedCallback() {
+        return __awaiter(this, void 0, void 0, function* () {
+            template.innerHTML = `<style>${css}</style>${html}`;
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.appendChild(document.importNode(template.content, true));
+            if (!this.hasAttribute('role'))
+                this.setAttribute('role', 'avatarfilterinput');
+            this._bind();
+            this._setEventListeners();
+        });
+    }
+    _bind() {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    _setEventListeners() {
+    }
+    disconnectedCallback() {
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        switch (name) {
+            default:
+                break;
+        }
+    }
+}
+/* unused harmony export AvatarFilterInputComponent */
+
+customElements.define(`ce-avatar-filter-input`, AvatarFilterInputComponent);
+
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>\r\n    Filter Avatars By Name\r\n</h2>\r\n<input type=\"text\" placeholder=\"Filter Avatars By Name...\" />";
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\r\n    display:block;\r\n}\r\n\r\ninput {\r\n    width:100%;\r\n    line-height:3em;\r\n    padding: 0px 20px 0px 20px;\r\n}\r\n"
 
 /***/ })
 /******/ ]);
