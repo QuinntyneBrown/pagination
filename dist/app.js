@@ -952,13 +952,13 @@ Router = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__ = __webpack_require__(109);
-/* unused harmony namespace reexport */
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_component__ = __webpack_require__(42);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_model__ = __webpack_require__(58);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_service__ = __webpack_require__(24);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__avatar_service__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__avatar_service__["a"]; });
 
 
 
@@ -1403,14 +1403,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 let AvatarService = class AvatarService {
     get() {
         return Promise.resolve([
-            { name: "", url: "/src/images/avatar_1.png" },
-            { name: "", url: "/src/images/avatar_2.png" },
-            { name: "", url: "/src/images/avatar_3.png" },
-            { name: "", url: "/src/images/avatar_4.png" },
-            { name: "", url: "/src/images/avatar_5.png" },
-            { name: "", url: "/src/images/avatar_6.png" },
-            { name: "", url: "/src/images/avatar_7.png" },
-            { name: "", url: "/src/images/avatar_8.png" }
+            { name: "Becky", url: "/src/images/avatar_1.png" },
+            { name: "Mike", url: "/src/images/avatar_2.png" },
+            { name: "Ronald", url: "/src/images/avatar_3.png" },
+            { name: "Laura", url: "/src/images/avatar_4.png" },
+            { name: "Melanie", url: "/src/images/avatar_5.png" },
+            { name: "Crystal", url: "/src/images/avatar_6.png" },
+            { name: "Sarah", url: "/src/images/avatar_7.png" },
+            { name: "Jennifer", url: "/src/images/avatar_8.png" }
         ]);
     }
 };
@@ -3857,9 +3857,12 @@ class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["
         this._currentPageElement.textContent = JSON.stringify(this.pageNumber);
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
-            const el = document.createElement("img");
-            el.src = this.pagedList.data[i].url;
-            this._containerElement.appendChild(el);
+            const h3El = document.createElement("h3");
+            const imageEl = document.createElement("img");
+            h3El.innerText = this.pagedList.data[i].name;
+            imageEl.src = this.pagedList.data[i].url;
+            this._containerElement.appendChild(h3El);
+            this._containerElement.appendChild(imageEl);
         }
     }
     attributeChangedCallback(name, oldValue, newValue) {
@@ -5971,15 +5974,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const template = __webpack_require__(97);
 const styles = __webpack_require__(98);
 class LandingPageComponent extends HTMLElement {
-    constructor(_avatarService = __WEBPACK_IMPORTED_MODULE_1__container__["a" /* Container */].resolve(__WEBPACK_IMPORTED_MODULE_0__avatars__["a" /* AvatarService */])) {
+    constructor(_avatarService = __WEBPACK_IMPORTED_MODULE_1__container__["a" /* Container */].resolve(__WEBPACK_IMPORTED_MODULE_0__avatars__["b" /* AvatarService */])) {
         super();
         this._avatarService = _avatarService;
+        this._avatars = [];
+        this._onAvatarsFilterInputTextChanged = this._onAvatarsFilterInputTextChanged.bind(this);
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
             this.innerHTML = `<style>${styles}</style> ${template}`;
-            this._avatarService.get().then(a => this._avatarRotatorElement.setAttribute("avatars", JSON.stringify(a)));
+            this._avatars = yield this._avatarService.get();
+            this._avatarRotatorElement.setAttribute("avatars", JSON.stringify(this._avatars));
+            document.body.addEventListener(__WEBPACK_IMPORTED_MODULE_0__avatars__["a" /* AVATARS_FILTER_INPUT_TEXT_CHANGED */], this._onAvatarsFilterInputTextChanged);
         });
+    }
+    _onAvatarsFilterInputTextChanged($event) {
+        var filteredAvatars = this._avatars.filter(x => x.name.indexOf($event.detail.avatarFilterValue) > -1);
+        this._avatarRotatorElement.setAttribute("avatars", JSON.stringify(filteredAvatars));
     }
     get _avatarRotatorElement() { return this.querySelector("ce-avatar-rotator"); }
 }
@@ -6826,6 +6837,8 @@ module.exports = ":root {\n  font-family: Montserrat,sans-serif;\n  width: 100%;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -6837,12 +6850,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const template = document.createElement("template");
 const html = __webpack_require__(110);
 const css = __webpack_require__(111);
+
+const AVATARS_FILTER_INPUT_TEXT_CHANGED = "[Avatars] Filter Input Text Changed";
+/* harmony export (immutable) */ __webpack_exports__["a"] = AVATARS_FILTER_INPUT_TEXT_CHANGED;
+
 class AvatarFilterInputComponent extends HTMLElement {
     constructor() {
         super();
+        this._onTextInputChanged = this._onTextInputChanged.bind(this);
+        this._avatarFilterValue$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__["BehaviorSubject"]("");
     }
     static get observedAttributes() {
-        return [];
+        return [
+            "avatar-filter-value"
+        ];
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -6857,18 +6878,31 @@ class AvatarFilterInputComponent extends HTMLElement {
     }
     _bind() {
         return __awaiter(this, void 0, void 0, function* () {
+            this._avatarFilterValue$.subscribe(value => this._textInputHTMLElement.value = value);
         });
     }
     _setEventListeners() {
+        this._textInputHTMLElement.addEventListener("keyup", this._onTextInputChanged);
+    }
+    _onTextInputChanged() {
+        this.shadowRoot.dispatchEvent(new CustomEvent(AVATARS_FILTER_INPUT_TEXT_CHANGED, {
+            cancelable: true,
+            bubbles: true,
+            composed: true,
+            detail: { avatarFilterValue: this._textInputHTMLElement.value }
+        }));
     }
     disconnectedCallback() {
+        this._textInputHTMLElement.removeEventListener("keyup", this._onTextInputChanged);
     }
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
-            default:
+            case "avatar-filter-value":
+                this._avatarFilterValue$.next(newValue);
                 break;
         }
     }
+    get _textInputHTMLElement() { return this.shadowRoot.querySelector("input"); }
 }
 /* unused harmony export AvatarFilterInputComponent */
 

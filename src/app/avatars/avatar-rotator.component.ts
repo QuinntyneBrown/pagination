@@ -37,9 +37,12 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
 
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
-            const el = document.createElement("img");
-            el.src = this.pagedList.data[i].url;
-            this._containerElement.appendChild(el);
+            const h3El = document.createElement("h3");
+            const imageEl = document.createElement("img");
+            h3El.innerText = this.pagedList.data[i].name;
+            imageEl.src = this.pagedList.data[i].url;
+            this._containerElement.appendChild(h3El);
+            this._containerElement.appendChild(imageEl);
         }
     }
 
