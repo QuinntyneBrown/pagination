@@ -2,7 +2,7 @@ import { AppRouterOutletComponent } from "./app-router-outlet.component";
 import offlineRuntime from "offline-plugin/runtime";
 
 const template = require("./app.component.html");
-const styles = require("./app.component.scss");
+const styles = require("./app.component.css");
 
 export class AppComponent extends HTMLElement {
     connectedCallback() {        

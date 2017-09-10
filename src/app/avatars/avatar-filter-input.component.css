@@ -1,0 +1,6 @@
+﻿input {
+    width: calc(100% - 84px);
+    line-height: 3em;
+    padding: 0px 20px 0px 20px;
+    margin:0px 20px 0px 20px;
+}

@@ -2,7 +2,7 @@ import { AvatarService, AVATARS_FILTER_INPUT_TEXT_CHANGED, Avatar } from "../ava
 import { Container } from "../../container";
 
 const template = require("./landing-page.component.html");
-const styles = require("./landing-page.component.scss");
+const styles = require("./landing-page.component.css");
 
 export class LandingPageComponent extends HTMLElement {
     constructor(

@@ -1,5 +1,5 @@
 const template = require("./footer.component.html");
-const styles = require("./footer.component.scss");
+const styles = require("./footer.component.css");
 
 export class FooterComponent extends HTMLElement {
     constructor() {

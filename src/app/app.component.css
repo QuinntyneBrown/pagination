@@ -1,0 +1,21 @@
+:host {
+
+    display:block;
+    height:100vh;   
+    width:400px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.router-outlet {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}

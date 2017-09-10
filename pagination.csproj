@@ -79,37 +79,29 @@
     <Content Include="packages.config" />
     <Content Include=".gitignore" />
     <Content Include="package.json" />
-    <Content Include="src\app\app.component.html">
-      <DependentUpon>app.component.ts</DependentUpon>
+    <Content Include="src\app\app.component.css">
+      <DependentUpon>app.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\app.component.scss">
-      <DependentUpon>app.component.ts</DependentUpon>
-    </Content>
+    <Content Include="src\app\app.component.html" />
     <Content Include="src\app\avatars\avatar-filter-input.component.css">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\avatars\avatar-rotator.component.html" />
-    <Content Include="src\app\avatars\avatar-rotator.component.scss">
+    <Content Include="src\app\avatars\avatar-rotator.component.css">
       <DependentUpon>avatar-rotator.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\landing\landing-page.component.html">
-      <DependentUpon>landing-page.component.ts</DependentUpon>
+    <Content Include="src\app\avatars\avatar-rotator.component.html" />
+    <Content Include="src\app\landing\landing-page.component.css">
+      <DependentUpon>landing-page.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\landing\landing-page.component.scss">
-      <DependentUpon>landing-page.component.ts</DependentUpon>
+    <Content Include="src\app\landing\landing-page.component.html" />
+    <Content Include="src\app\shared\footer.component.css">
+      <DependentUpon>footer.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\shared\footer.component.html">
-      <DependentUpon>footer.component.ts</DependentUpon>
+    <Content Include="src\app\shared\footer.component.html" />
+    <Content Include="src\app\shared\header.component.css">
+      <DependentUpon>header.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\shared\footer.component.scss">
-      <DependentUpon>footer.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\shared\header.component.html">
-      <DependentUpon>header.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\shared\header.component.scss">
-      <DependentUpon>header.component.ts</DependentUpon>
-    </Content>
+    <Content Include="src\app\shared\header.component.html" />
     <Content Include="src\images\avatar_1.png" />
     <Content Include="src\images\avatar_2.png" />
     <Content Include="src\images\avatar_3.png" />
@@ -138,11 +130,23 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.ts">
+      <DependentUpon>app.component.html</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-filter-input.component.ts">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-rotator.component.ts">
       <DependentUpon>avatar-rotator.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\landing\landing-page.component.ts">
+      <DependentUpon>landing-page.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\footer.component.ts">
+      <DependentUpon>footer.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\header.component.ts">
+      <DependentUpon>header.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\utilities\constructor.ts" />
     <TypeScriptCompile Include="src\app\utilities\store.ts" />
@@ -196,12 +200,8 @@
     <TypeScriptCompile Include="src\app\utilities\translate-xy.ts" />
     <TypeScriptCompile Include="src\app\utilities\wait.ts" />
     <TypeScriptCompile Include="src\custom-typings.d.ts" />
-    <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\landing\landing-page.component.ts" />
     <TypeScriptCompile Include="src\app\landing\index.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
-    <TypeScriptCompile Include="src\app\shared\header.component.ts" />
-    <TypeScriptCompile Include="src\app\shared\footer.component.ts" />
     <TypeScriptCompile Include="src\app\shared\index.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar.model.ts" />
@@ -225,7 +225,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51305</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

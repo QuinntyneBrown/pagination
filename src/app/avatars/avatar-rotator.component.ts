@@ -4,7 +4,7 @@ import { Container } from "../../container";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 const template = require("./avatar-rotator.component.html");
-const styles = require("./avatar-rotator.component.scss");
+const styles = require("./avatar-rotator.component.css");
 
 export class AvatarRotatorComponent extends PaginatedComponent<any> {
     constructor() {

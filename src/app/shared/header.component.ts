@@ -1,5 +1,5 @@
 const template = require("./header.component.html");
-const styles = require("./header.component.scss");
+const styles = require("./header.component.css");
 
 export class HeaderComponent extends HTMLElement {
     constructor() {
