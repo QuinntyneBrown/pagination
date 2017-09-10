@@ -1008,12 +1008,15 @@ Router = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__ = __webpack_require__(44);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_component__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_slide_component__ = __webpack_require__(113);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_model__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_rotator_component__ = __webpack_require__(56);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_service__ = __webpack_require__(25);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__avatar_service__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_model__ = __webpack_require__(62);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__avatar_service__ = __webpack_require__(25);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__avatar_service__["a"]; });
+
 
 
 
@@ -7111,6 +7114,80 @@ module.exports = "<div class=\"container\">\r\n    <ce-header></ce-header>\r\n  
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n    display:block;\r\n    height:100vh;   \r\n    width:440px;\r\n    margin:0 auto;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    max-width: 100%;\r\n}"
+
+/***/ }),
+/* 113 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__);
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+const template = document.createElement("template");
+const html = __webpack_require__(114);
+const styles = __webpack_require__(115);
+class AvatarRotatorSlideComponent extends HTMLElement {
+    constructor() {
+        super();
+        this._avatar$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__["BehaviorSubject"]({});
+    }
+    static get observedAttributes() {
+        return [
+            "avatar"
+        ];
+    }
+    connectedCallback() {
+        return __awaiter(this, void 0, void 0, function* () {
+            template.innerHTML = `<style>${styles}</style>${html}`;
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.appendChild(document.importNode(template.content, true));
+            if (!this.hasAttribute('role'))
+                this.setAttribute('role', 'avatarrotatorslide');
+            this._bind();
+        });
+    }
+    _bind() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this._avatar$.subscribe(x => {
+                this.headingElement.innerHTML = x.name;
+                this.imageElement.src = x.url;
+            });
+        });
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        switch (name) {
+            case "avatar":
+                this._avatar$.next(JSON.parse(newValue));
+                break;
+        }
+    }
+    get headingElement() { return this.shadowRoot.querySelector("h3"); }
+    get imageElement() { return this.shadowRoot.querySelector("img"); }
+}
+/* unused harmony export AvatarRotatorSlideComponent */
+
+customElements.define(`ce-avatar-rotator-slide`, AvatarRotatorSlideComponent);
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports) {
+
+module.exports = "<h3></h3>\r\n<img />";
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\r\n    display:block;\r\n    contain:content;\r\n}\r\n"
 
 /***/ })
 /******/ ]);

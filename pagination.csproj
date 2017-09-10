@@ -86,6 +86,9 @@
     <Content Include="src\app\avatars\avatar-filter-input.component.css">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </Content>
+    <Content Include="src\app\avatars\avatar-rotator-slide.component.css">
+      <DependentUpon>avatar-rotator-slide.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\avatars\avatar-rotator.component.css">
       <DependentUpon>avatar-rotator.component.html</DependentUpon>
     </Content>
@@ -124,6 +127,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="src\app\avatars\avatar-filter-input.component.html" />
+    <Content Include="src\app\avatars\avatar-rotator-slide.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -135,6 +139,9 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-filter-input.component.ts">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\avatars\avatar-rotator-slide.component.ts">
+      <DependentUpon>avatar-rotator-slide.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-rotator.component.ts">
       <DependentUpon>avatar-rotator.component.html</DependentUpon>
