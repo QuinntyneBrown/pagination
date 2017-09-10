@@ -9,7 +9,6 @@ const styles = require("./avatar-rotator.component.css");
 export class AvatarRotatorComponent extends PaginatedComponent<any> {
     constructor() {
         super(1, 1, ".next", ".previous");
-        
     }
 
     private _avatars$: BehaviorSubject<any> = new BehaviorSubject([]);
@@ -24,11 +23,6 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
     }
 
     public bind() { this._avatars$.subscribe(this.onEntitiesChanged); }
-
-    
-    public setEventListeners() {
-        
-    }
     
     public render() {
         this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
@@ -61,7 +55,6 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
     private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }
 
     private get _avatars(): Array<Avatar> { return JSON.parse(this.getAttribute("avatars")) as Array<Avatar>; }
-
 }
 
 customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

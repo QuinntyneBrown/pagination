@@ -4799,8 +4799,6 @@ class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["
         this.setEventListeners();
     }
     bind() { this._avatars$.subscribe(this.onEntitiesChanged); }
-    setEventListeners() {
-    }
     render() {
         this.pagedList = Object(__WEBPACK_IMPORTED_MODULE_0__pagination__["b" /* toPageListFromInMemory */])(this.entities, this.pageNumber, this.pageSize);
         this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);
@@ -4942,7 +4940,7 @@ module.exports = "<h2>Avatar Rotator</h2>\r\n\r\n<div class=\"container\"></div>
 /* 61 */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\r\n\tdisplay:block;\r\n    max-width:400px;\r\n}\r\n\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\n.next,\r\n.previous {\r\n    cursor: pointer;\r\n}\r\n\r\n.container {\r\n    width: 100%;\r\n    max-height:400px;\r\n    height: 200px;\r\n    display: inline-block;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n}\r\n\r\nsection {\r\n    margin: 30px 0px;\r\n    width: 100%;\r\n}\r\n\r\nsection .previous, section .current-page-container, section .next {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: inline-block;\r\n    width: 32%;\r\n    text-align: center;\r\n}"
+module.exports = ":host {\r\n\tdisplay:grid;\r\n    grid-template-columns:1fr;\r\n    grid-template-rows: 3em 250px 20px;\r\n    grid-gap:0px;\r\n    max-width:400px;\r\n}\r\n\r\nh2 {\r\n    text-align: center;\r\n    \r\n}\r\n\r\nimg {\r\n    display:block;\r\n    margin:0 auto;\r\n}\r\n\r\n.next,\r\n.previous {\r\n    cursor: pointer;\r\n}\r\n\r\n.container {\r\n    padding:0;\r\n    width: 100%;\r\n    height: 200px;\r\n    display: block;\r\n    margin: 0;\r\n    text-align: center;\r\n}\r\n\r\nsection {\r\n    margin: 30px 0px;\r\n    width: 100%;\r\n}\r\n\r\nsection .previous, section .current-page-container, section .next {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: inline-block;\r\n    width: 32%;\r\n    text-align: center;\r\n}"
 
 /***/ }),
 /* 62 */
@@ -7112,7 +7110,7 @@ module.exports = "<div class=\"container\">\r\n    <ce-header></ce-header>\r\n  
 /* 112 */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\r\n    display:block;\r\n    height:100vh;   \r\n    width:400px;\r\n    margin:0 auto;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    max-width: 100%;\r\n}"
+module.exports = ":host {\r\n    display:block;\r\n    height:100vh;   \r\n    width:440px;\r\n    margin:0 auto;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    max-width: 100%;\r\n}"
 
 /***/ })
 /******/ ]);
