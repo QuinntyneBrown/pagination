@@ -11,7 +11,8 @@ export class FooterComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = `<style>${styles}</style> ${template}`;
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = `<style>${styles}</style> ${template}`;
         this._bind();
         this._addEventListeners();
     }

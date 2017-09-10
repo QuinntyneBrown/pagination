@@ -1,8 +1,8 @@
 :host {
-
     display:block;
     height:100vh;   
     width:400px;
+    margin:0 auto;
 }
 
 .container {

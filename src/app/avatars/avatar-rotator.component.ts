@@ -54,11 +54,11 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
         }
     }
 
-    private get _currentPageElement(): HTMLElement { return this.querySelector(".current-page") as HTMLElement; }
+    private get _currentPageElement(): HTMLElement { return this.shadowRoot.querySelector(".current-page") as HTMLElement; }
 
-    private get _totalPagesElement(): HTMLElement { return this.querySelector(".total-pages") as HTMLElement; }
+    private get _totalPagesElement(): HTMLElement { return this.shadowRoot.querySelector(".total-pages") as HTMLElement; }
 
-    private get _containerElement(): HTMLElement { return this.querySelector(".container") as HTMLElement; }
+    private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }
 
     private get _avatars(): Array<Avatar> { return JSON.parse(this.getAttribute("avatars")) as Array<Avatar>; }
 

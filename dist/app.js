@@ -4155,7 +4155,7 @@ module.exports = "<h2>\r\n    Filter Avatars By Name\r\n</h2>\r\n<input type=\"t
 /* 46 */
 /***/ (function(module, exports) {
 
-module.exports = "input {\r\n    width: calc(100% - 84px);\r\n    line-height: 3em;\r\n    padding: 0px 20px 0px 20px;\r\n    margin:0px 20px 0px 20px;\r\n}"
+module.exports = "input {\r\n    width: calc(100% - 84px);\r\n    max-width:400px;\r\n    line-height: 3em;\r\n    padding: 0px 20px 0px 20px;\r\n    margin:0px 20px 0px 20px;\r\n}"
 
 /***/ }),
 /* 47 */
@@ -4822,9 +4822,9 @@ class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["
                 break;
         }
     }
-    get _currentPageElement() { return this.querySelector(".current-page"); }
-    get _totalPagesElement() { return this.querySelector(".total-pages"); }
-    get _containerElement() { return this.querySelector(".container"); }
+    get _currentPageElement() { return this.shadowRoot.querySelector(".current-page"); }
+    get _totalPagesElement() { return this.shadowRoot.querySelector(".total-pages"); }
+    get _containerElement() { return this.shadowRoot.querySelector(".container"); }
     get _avatars() { return JSON.parse(this.getAttribute("avatars")); }
 }
 /* unused harmony export AvatarRotatorComponent */
@@ -4853,7 +4853,8 @@ class PaginatedComponent extends HTMLElement {
         this.onEntitiesChanged = this.onEntitiesChanged.bind(this);
     }
     connectedCallback(options) {
-        this.innerHTML = `<style>${options.styles}</style> ${options.template}`;
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `<style>${options.styles}</style>${options.template}`;
         this._nextElement.addEventListener("click", this.onNext);
         this._previousElement.addEventListener("click", this.onPrevious);
         this.setEventListeners();
@@ -4891,8 +4892,8 @@ class PaginatedComponent extends HTMLElement {
         }
         this.render();
     }
-    get _nextElement() { return this.querySelector(this._nextCssClass); }
-    get _previousElement() { return this.querySelector(this._previousCssClass); }
+    get _nextElement() { return this.shadowRoot.querySelector(this._nextCssClass); }
+    get _previousElement() { return this.shadowRoot.querySelector(this._previousCssClass); }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = PaginatedComponent;
 
@@ -4941,7 +4942,7 @@ module.exports = "<h2>Avatar Rotator</h2>\r\n\r\n<div class=\"container\"></div>
 /* 61 */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\r\n\tdisplay:block;\r\n    width:400px;\r\n}\r\n\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\n.next,\r\n.previous {\r\n    cursor: pointer;\r\n}\r\n\r\n.container {\r\n    width: 100%;\r\n    height: 200px;\r\n    display: inline-block;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n}\r\n\r\nsection {\r\n    margin: 30px 0px;\r\n    width: 100%;\r\n}\r\n\r\nsection .previous, section .current-page-container, section .next {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: inline-block;\r\n    width: 32%;\r\n    text-align: center;\r\n}"
+module.exports = ":host {\r\n\tdisplay:block;\r\n    max-width:400px;\r\n}\r\n\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\n.next,\r\n.previous {\r\n    cursor: pointer;\r\n}\r\n\r\n.container {\r\n    width: 100%;\r\n    max-height:400px;\r\n    height: 200px;\r\n    display: inline-block;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n}\r\n\r\nsection {\r\n    margin: 30px 0px;\r\n    width: 100%;\r\n}\r\n\r\nsection .previous, section .current-page-container, section .next {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: inline-block;\r\n    width: 32%;\r\n    text-align: center;\r\n}"
 
 /***/ }),
 /* 62 */
@@ -6993,7 +6994,8 @@ class FooterComponent extends HTMLElement {
         return [];
     }
     connectedCallback() {
-        this.innerHTML = `<style>${styles}</style> ${template}`;
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = `<style>${styles}</style> ${template}`;
         this._bind();
         this._addEventListeners();
     }
@@ -7042,7 +7044,8 @@ class HeaderComponent extends HTMLElement {
         return [];
     }
     connectedCallback() {
-        this.innerHTML = `<style>${styles}</style> ${template}`;
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = `<style>${styles}</style> ${template}`;
         this._bind();
         this._addEventListeners();
     }
@@ -7087,11 +7090,12 @@ const template = __webpack_require__(111);
 const styles = __webpack_require__(112);
 class AppComponent extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `<style>${styles}</style>${template}`;
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `<style>${styles}</style>${template}`;
         this.routerOutlet = new __WEBPACK_IMPORTED_MODULE_0__app_router_outlet_component__["a" /* AppRouterOutletComponent */](this.routerOutletElement);
         this.routerOutlet.connectedCallback();
     }
-    get routerOutletElement() { return this.querySelector(".router-outlet"); }
+    get routerOutletElement() { return this.shadowRoot.querySelector(".router-outlet"); }
 }
 /* unused harmony export AppComponent */
 
@@ -7108,7 +7112,7 @@ module.exports = "<div class=\"container\">\r\n    <ce-header></ce-header>\r\n  
 /* 112 */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\r\n\r\n    display:block;\r\n    height:100vh;   \r\n    width:400px;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    max-width: 100%;\r\n}"
+module.exports = ":host {\r\n    display:block;\r\n    height:100vh;   \r\n    width:400px;\r\n    margin:0 auto;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    max-width: 100%;\r\n}"
 
 /***/ })
 /******/ ]);

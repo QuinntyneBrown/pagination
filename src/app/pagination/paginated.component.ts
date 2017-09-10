@@ -9,8 +9,9 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
         this.onEntitiesChanged = this.onEntitiesChanged.bind(this);
     }
     
-    connectedCallback(options: { template: string, styles: string }) {        
-        this.innerHTML = `<style>${options.styles}</style> ${options.template}`;        
+    connectedCallback(options: { template: string, styles: string }) {  
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `<style>${options.styles}</style>${options.template}`;    
         this._nextElement.addEventListener("click", this.onNext);
         this._previousElement.addEventListener("click", this.onPrevious);
         this.setEventListeners();
@@ -62,7 +63,7 @@ export abstract class PaginatedComponent<T> extends HTMLElement {
         this.render();
     }
 
-    private get _nextElement(): HTMLElement { return this.querySelector(this._nextCssClass) as HTMLElement; }
+    private get _nextElement(): HTMLElement { return this.shadowRoot.querySelector(this._nextCssClass) as HTMLElement; }
 
-    private get _previousElement(): HTMLElement { return this.querySelector(this._previousCssClass) as HTMLElement; }
+    private get _previousElement(): HTMLElement { return this.shadowRoot.querySelector(this._previousCssClass) as HTMLElement; }
 }
