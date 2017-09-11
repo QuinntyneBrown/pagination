@@ -13,7 +13,9 @@ export class LandingPageComponent extends HTMLElement {
     }
 
     async connectedCallback() {
-        this.innerHTML = `<style>${styles}</style> ${template}`;   
+        this.attachShadow({ mode: "open" });
+
+        this.shadowRoot.innerHTML = `<style>${styles}</style> ${template}`;   
         
         this._avatars = await this._avatarService.get();
 
@@ -23,13 +25,14 @@ export class LandingPageComponent extends HTMLElement {
     }
 
     private _onAvatarsFilterInputTextChanged($event) {
-        var filteredAvatars = this._avatars.filter(x => x.name.indexOf($event.detail.avatarFilterValue) > -1);        
+        const filteredAvatars = this._avatars.filter(x => x.name.toLowerCase().indexOf($event.detail.avatarFilterValue.toLowerCase()) > -1);        
         this._avatarRotatorElement.setAttribute("avatars", JSON.stringify(filteredAvatars));
+        this._avatarRotatorElement.setAttribute("avatar-filter-value", $event.detail.avatarFilterValue.toLowerCase());
     }
 
     private _avatars: Array<Avatar> = [];
 
-    private get _avatarRotatorElement(): HTMLElement { return this.querySelector("ce-avatar-rotator") as HTMLElement; }
+    private get _avatarRotatorElement(): HTMLElement { return this.shadowRoot.querySelector("ce-avatar-rotator") as HTMLElement; }
 }
 
-customElements.define(`ce-landing-page`,LandingPageComponent);
+customElements.define(`ce-landing-page`, LandingPageComponent);

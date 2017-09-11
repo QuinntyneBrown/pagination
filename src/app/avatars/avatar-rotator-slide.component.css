@@ -1,4 +1,9 @@
 :host {
     display:block;
-    contain:content;
+    user-select:none;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
 }

@@ -17,7 +17,7 @@ export class AvatarRotatorSlideComponent extends HTMLElement {
         ];
     }
 
-    async connectedCallback() {
+    connectedCallback() {
         
         template.innerHTML = `<style>${styles}</style>${html}`; 
 

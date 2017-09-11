@@ -22,13 +22,14 @@
     "webpack": "3.5.5"
   },
   "dependencies": {
+    "@types/electron": "^1.6.10",
     "@webcomponents/custom-elements": "1.0.0",
     "core-js": "^2.4.1",
-    "injection-js": "^1.0.0",
+    "electron": "^1.7.6",
+    "injection-js": "2.1.0",
     "live-server": "^1.2.0",
     "reflect-metadata": "^0.1.9",
     "rxjs": "5.4.3",
-    "sass-loader": "^4.0.2",
     "typescript": "^2.5.2",
     "typings": "^2.1.1",
     "webcomponents.js": "^0.7.24",

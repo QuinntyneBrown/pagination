@@ -9,12 +9,19 @@ const styles = require("./avatar-rotator.component.css");
 export class AvatarRotatorComponent extends PaginatedComponent<any> {
     constructor() {
         super(1, 1, ".next", ".previous");
+
+        this.onAvatarFilterValueChanged = this.onAvatarFilterValueChanged.bind(this);
     }
 
     private _avatars$: BehaviorSubject<any> = new BehaviorSubject([]);
 
+    private _avatarFilterValue$: BehaviorSubject<string> = new BehaviorSubject("");
+
     static get observedAttributes() {
-        return ["avatars"];
+        return [
+            "avatars",
+            "avatar-filter-value"
+        ];
     }
 
     connectedCallback() {
@@ -22,7 +29,10 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
         this.setEventListeners();              
     }
 
-    public bind() { this._avatars$.subscribe(this.onEntitiesChanged); }
+    public bind() {
+        this._avatars$.subscribe(this.onEntitiesChanged);
+        this._avatarFilterValue$.subscribe(this.onAvatarFilterValueChanged);
+    }
     
     public render() {
         this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
@@ -31,12 +41,18 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
 
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
-            const h3El = document.createElement("h3");
-            const imageEl = document.createElement("img");
-            h3El.innerText = this.pagedList.data[i].name;
-            imageEl.src = this.pagedList.data[i].url;
-            this._containerElement.appendChild(h3El);
-            this._containerElement.appendChild(imageEl);
+            const slideElement = document.createElement("ce-avatar-rotator-slide");
+            slideElement.setAttribute("avatar", JSON.stringify(this.pagedList.data[i]));
+            this._containerElement.appendChild(slideElement);
+        }
+    }
+
+    public onAvatarFilterValueChanged(value: string) {
+
+        this._headingElement.innerHTML = (value != "") ? "Avatar Rotator <span>(Filtered)</span>" : "Avatar Rotator";
+            
+        for (let i = 0; i < this._containerElement.children.length; i++) {
+            this._containerElement.children[i].setAttribute("avatar-filter-value", value);
         }
     }
 
@@ -45,6 +61,10 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
             case "avatars":                
                 this._avatars$.next(JSON.parse(newValue));                
                 break;
+
+            case "avatar-filter-value":
+                this._avatarFilterValue$.next(newValue);
+                break;
         }
     }
 
@@ -52,9 +72,9 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
 
     private get _totalPagesElement(): HTMLElement { return this.shadowRoot.querySelector(".total-pages") as HTMLElement; }
 
-    private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }
+    private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }    
 
-    private get _avatars(): Array<Avatar> { return JSON.parse(this.getAttribute("avatars")) as Array<Avatar>; }
+    private get _headingElement(): HTMLElement { return this.shadowRoot.querySelector("h2") as HTMLElement; }
 }
 
 customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

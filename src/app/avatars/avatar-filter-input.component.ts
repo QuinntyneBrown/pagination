@@ -48,7 +48,7 @@ export class AvatarFilterInputComponent extends HTMLElement {
             bubbles: true,
             composed: true,
             detail: { avatarFilterValue: this._textInputHTMLElement.value }
-        } as EventInit));
+        } as CustomEventInit));
     }
 
     disconnectedCallback() {

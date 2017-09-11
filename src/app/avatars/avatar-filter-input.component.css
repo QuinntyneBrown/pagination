@@ -1,6 +1,14 @@
-﻿input {
+﻿:host {
+    user-select:none;
+    display:block;
+}
+
+h2 {
+    margin: 0px 0px 20px 20px;
+}
+
+input {
     width: calc(100% - 84px);
-    max-width:400px;
     line-height: 3em;
     padding: 0px 20px 0px 20px;
     margin:0px 20px 0px 20px;
