@@ -27,7 +27,7 @@ export class LandingPageComponent extends HTMLElement {
     private _onAvatarsFilterInputTextChanged($event) {
         const filteredAvatars = this._avatars.filter(x => x.name.toLowerCase().indexOf($event.detail.avatarFilterValue.toLowerCase()) > -1);        
         this._avatarRotatorElement.setAttribute("avatars", JSON.stringify(filteredAvatars));
-        this._avatarRotatorElement.setAttribute("avatar-filter-value", $event.detail.avatarFilterValue.toLowerCase());
+        this._avatarRotatorElement.setAttribute("avatar-filter-value", $event.detail.avatarFilterValue);
     }
 
     private _avatars: Array<Avatar> = [];

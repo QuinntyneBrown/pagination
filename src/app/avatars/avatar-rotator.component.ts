@@ -49,6 +49,8 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
 
     public onAvatarFilterValueChanged(value: string) {
 
+        this._avatarNotFoundElement.setAttribute("avatar-filter-value", value);
+
         this._headingElement.innerHTML = (value != "") ? "Avatar Rotator <span>(Filtered)</span>" : "Avatar Rotator";
             
         for (let i = 0; i < this._containerElement.children.length; i++) {
@@ -73,6 +75,8 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
     private get _headingElement(): HTMLElement { return this.shadowRoot.querySelector("h2") as HTMLElement; }
 
     private get _pagerElement(): HTMLElement { return this.shadowRoot.querySelector("ce-pager") as HTMLElement; }
+
+    private get _avatarNotFoundElement(): HTMLElement { return this.shadowRoot.querySelector("ce-avatar-not-found") as HTMLElement; }
 }
 
 customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

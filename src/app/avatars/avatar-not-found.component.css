@@ -1,0 +1,6 @@
+:host {
+    display:block;
+    user-select:none;
+    line-height:3em;
+    text-align:center;
+}

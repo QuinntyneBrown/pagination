@@ -29,3 +29,19 @@ img {
     margin: 0;
     text-align: center;
 }
+
+ce-avatar-not-found {
+    display:none;
+}
+
+:host(.empty) ce-avatar-not-found {
+    display: block;
+}
+
+:host(.empty) .container {
+    display: none;
+}
+
+:host(.empty) ce-pager {
+    display: none;
+}

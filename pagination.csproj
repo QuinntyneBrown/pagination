@@ -7,7 +7,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{57DB8F84-D269-42DF-B7DF-2A5085908BB2}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,7 +23,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -84,6 +86,9 @@
     <Content Include="src\app\avatars\avatar-filter-input.component.css">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </Content>
+    <Content Include="src\app\avatars\avatar-not-found.component.css">
+      <DependentUpon>avatar-not-found.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\avatars\avatar-rotator-slide.component.css">
       <DependentUpon>avatar-rotator-slide.component.html</DependentUpon>
     </Content>
@@ -120,7 +125,6 @@
     <None Include="src\styles\_breakpoints.scss" />
     <None Include="src\styles\_variables.scss" />
     <Content Include="tsconfig.json" />
-    <Content Include="src\app\pagination\paged-list.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,6 +134,7 @@
     <Content Include="src\app\avatars\avatar-filter-input.component.html" />
     <Content Include="src\app\avatars\avatar-rotator-slide.component.html" />
     <Content Include="src\app\pagination\pager.component.html" />
+    <Content Include="src\app\avatars\avatar-not-found.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -141,6 +146,9 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-filter-input.component.ts">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\avatars\avatar-not-found.component.ts">
+      <DependentUpon>avatar-not-found.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\avatars\avatar-rotator-slide.component.ts">
       <DependentUpon>avatar-rotator-slide.component.html</DependentUpon>
@@ -168,7 +176,6 @@
     <TypeScriptCompile Include="src\app\app-router-outlet.component.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\pagination\index.ts" />
-    <TypeScriptCompile Include="src\app\pagination\ipaged-list.d.ts" />
     <TypeScriptCompile Include="src\app\pagination\paged-list.model.ts" />
     <TypeScriptCompile Include="src\app\pagination\paging-config.model.ts" />
     <TypeScriptCompile Include="src\app\pagination\to-paged-list-from-in-memory.ts" />
@@ -245,7 +252,8 @@
           <IISUrl>http://localhost:51305/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
