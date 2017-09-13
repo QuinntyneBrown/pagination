@@ -8,7 +8,7 @@ const styles = require("./avatar-rotator.component.css");
 
 export class AvatarRotatorComponent extends PaginatedComponent<any> {
     constructor() {
-        super(1, 1, ".next", ".previous");
+        super(1, 1, "ce-pager", "ce-pager");
 
         this.onAvatarFilterValueChanged = this.onAvatarFilterValueChanged.bind(this);
     }
@@ -36,8 +36,8 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
     
     public render() {
         this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
-        this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);
-        this._currentPageElement.textContent = JSON.stringify(this.pageNumber);
+        this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
+        this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
 
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
@@ -67,14 +67,12 @@ export class AvatarRotatorComponent extends PaginatedComponent<any> {
                 break;
         }
     }
-
-    private get _currentPageElement(): HTMLElement { return this.shadowRoot.querySelector(".current-page") as HTMLElement; }
-
-    private get _totalPagesElement(): HTMLElement { return this.shadowRoot.querySelector(".total-pages") as HTMLElement; }
-
+    
     private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }    
 
     private get _headingElement(): HTMLElement { return this.shadowRoot.querySelector("h2") as HTMLElement; }
+
+    private get _pagerElement(): HTMLElement { return this.shadowRoot.querySelector("ce-pager") as HTMLElement; }
 }
 
 customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

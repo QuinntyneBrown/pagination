@@ -95,6 +95,9 @@
       <DependentUpon>landing-page.component.html</DependentUpon>
     </Content>
     <Content Include="src\app\landing\landing-page.component.html" />
+    <Content Include="src\app\pagination\pager.component.css">
+      <DependentUpon>pager.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\shared\footer.component.css">
       <DependentUpon>footer.component.html</DependentUpon>
     </Content>
@@ -126,6 +129,7 @@
     </None>
     <Content Include="src\app\avatars\avatar-filter-input.component.html" />
     <Content Include="src\app\avatars\avatar-rotator-slide.component.html" />
+    <Content Include="src\app\pagination\pager.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -146,6 +150,9 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\landing\landing-page.component.ts">
       <DependentUpon>landing-page.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\pagination\pager.component.ts">
+      <DependentUpon>pager.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\shared\electron.service.ts" />
     <TypeScriptCompile Include="src\app\shared\footer.component.ts">
