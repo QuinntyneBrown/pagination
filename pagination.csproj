@@ -148,6 +148,8 @@
     <TypeScriptCompile Include="src\app\landing\landing-page.component.ts">
       <DependentUpon>landing-page.component.html</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\pagination\filter.behavior.ts" />
+    <TypeScriptCompile Include="src\app\pagination\pager.behavior.ts" />
     <TypeScriptCompile Include="src\app\shared\electron.service.ts" />
     <TypeScriptCompile Include="src\app\shared\footer.component.ts">
       <DependentUpon>footer.component.html</DependentUpon>
@@ -155,6 +157,7 @@
     <TypeScriptCompile Include="src\app\shared\header.component.ts">
       <DependentUpon>header.component.html</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\mixin.ts" />
     <TypeScriptCompile Include="src\app\utilities\constructor.ts" />
     <TypeScriptCompile Include="src\app\utilities\store.ts" />
     <TypeScriptCompile Include="src\create-ioc-container.ts" />
@@ -212,7 +215,7 @@
     <TypeScriptCompile Include="src\app\shared\index.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar.model.ts" />
-    <TypeScriptCompile Include="src\app\pagination\paginated.component.ts" />
+    <TypeScriptCompile Include="src\app\pagination\pagination.behavior.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar.service.ts" />
     <TypeScriptCompile Include="src\app\avatars\index.ts" />
   </ItemGroup>

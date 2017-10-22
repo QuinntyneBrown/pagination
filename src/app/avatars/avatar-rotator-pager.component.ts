@@ -1,4 +1,5 @@
 import { html, render, TemplateResult } from "lit-html";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 export class AvatarRotatorPagerComponent extends HTMLElement {
     constructor() {
@@ -6,7 +7,10 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
     }
 
     static get observedAttributes () {
-        return [];
+        return [
+            "current-page",
+            "total-pages"
+        ];
     }
 
     async connectedCallback() {    
@@ -15,7 +19,24 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
         if (!this.hasAttribute('role'))
             this.setAttribute('role', 'avatarrotatorpager');
 
-        this.render(html`
+        this.render(this._templateResult);
+
+        this._bind();
+    }
+
+    public render(templateResult: TemplateResult) {
+        render(templateResult, this.shadowRoot);
+    }
+
+    private async _bind() {
+        this.currentPage$.subscribe(x => this.render(this._templateResult));
+
+        this.totalPages$.subscribe(x => this.render(this._templateResult));
+    }
+
+    private get _templateResult(): TemplateResult {
+
+        return html`
             <style>
                 :host {
                     display:block;
@@ -35,43 +56,27 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
 
             <a class="previous">Previous</a>
             <span class="current-page-container">
-                <a class="current-page"></a>/<a class="total-pages"></a>
+                <a class="current-page">${this.currentPage$.value}</a>/<a class="total-pages">${this.totalPages$.value}</a>
             </span>
             <a class="next">Next</a>
-        `);
-
-
-        this._bind();
-        this._setEventListeners();
+        `;
     }
+    
+    public totalPages$: BehaviorSubject<string> = new BehaviorSubject("");
 
-    public render(templateResult: TemplateResult) {
-        render(templateResult, this.shadowRoot);
-    }
-
-    private async _bind() {
-
-    }
-
-    private _setEventListeners() {
-
-    }
-
-    disconnectedCallback() {
-
-    }
+    public currentPage$: BehaviorSubject<string> = new BehaviorSubject("");
 
     attributeChangedCallback (name, oldValue, newValue) {
         switch (name) {
-            default:
+            case "total-pages":
+                this.totalPages$.next(newValue);
+                break;
+
+            case "current-page":
+                this.currentPage$.next(newValue);
                 break;
         }
-    }
-
-    private get _currentPageElement(): HTMLElement { return this.shadowRoot.querySelector(".current-page") as HTMLElement; }
-
-    private get _totalPagesElement(): HTMLElement { return this.shadowRoot.querySelector(".total-pages") as HTMLElement; }
-
+    }    
 }
 
 customElements.define(`ce-avatar-rotator-pager`,AvatarRotatorPagerComponent);
