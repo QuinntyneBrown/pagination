@@ -1,6 +1,4 @@
-﻿/// <reference path="app/pagination/ipaged-list.d.ts" />
-
-declare module "offline-plugin/runtime" {
+﻿declare module "offline-plugin/runtime" {
 
     var offlineRuntime:any;
 

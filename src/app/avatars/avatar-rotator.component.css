@@ -21,11 +21,6 @@ img {
     margin:0 auto;
 }
 
-.next,
-.previous {
-    cursor: pointer;
-}
-
 .container {
     padding:0;
     width: 100%;
@@ -35,16 +30,18 @@ img {
     text-align: center;
 }
 
-section {
-    margin: 30px 0px;
-    width: 100%;
-    user-select:none;
+ce-avatar-not-found {
+    display:none;
 }
 
-section .previous, section .current-page-container, section .next {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: 32%;
-    text-align: center;
+:host(.empty) ce-avatar-not-found {
+    display: block;
+}
+
+:host(.empty) .container {
+    display: none;
+}
+
+:host(.empty) ce-pager {
+    display: none;
 }

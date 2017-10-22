@@ -1,0 +1,21 @@
+:host {
+    display:grid;
+    user-select:none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:0px;
+    height:3em;
+}
+
+a {
+    cursor: pointer;
+    text-align: center;
+    line-height: 3em;
+}
+
+span {
+    text-align:center;
+}
+
+span a {
+    cursor:default;
+}

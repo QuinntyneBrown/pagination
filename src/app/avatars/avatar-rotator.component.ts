@@ -27,7 +27,7 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
 
     public onEntitiesChanged(entities: Array<any>) { /* Pagination Behavior */ }
 
-    public pagedList: IPagedList<any>;
+    public pagedList: any;
 
     public entities: Array<any>;
 
@@ -66,11 +66,14 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
         this.entities$.subscribe(this.onEntitiesChanged);
     }
 
-    public onPagedListModelChange(pagedList: IPagedList<any>) { this.render(); }
+    public onPagedListModelChange(pagedList: any) { this.render(); }
 
     public render() {                
         this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);
         this._currentPageElement.textContent = JSON.stringify(this.pageNumber);
+
+        this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
+        this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
 
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
@@ -81,6 +84,7 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     }
 
     public onAvatarFilterValueChanged(value: string) {
+        this._avatarNotFoundElement.setAttribute("avatar-filter-value", value);
         this._headingElement.innerHTML = (value != "") ? "Avatar Rotator <span>(Filtered)</span>" : "Avatar Rotator";
             
         for (let i = 0; i < this._containerElement.children.length; i++) {
@@ -100,7 +104,6 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
         }
     }
 
-
     disconnectedCallback() {
         this.nextElement.removeEventListener("click", this.onNext);
         this.previousElement.removeEventListener("click", this.onPrevious);
@@ -113,10 +116,15 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }    
 
     private get _headingElement(): HTMLElement { return this.shadowRoot.querySelector("h2") as HTMLElement; }
-
+    
     public get nextElement(): HTMLElement { return this.shadowRoot.querySelector(this.nextCssClass) as HTMLElement; }
 
     public get previousElement(): HTMLElement { return this.shadowRoot.querySelector(this.previousCssClass) as HTMLElement; }
+
+    private get _pagerElement(): HTMLElement { return this.shadowRoot.querySelector("ce-pager") as HTMLElement; }
+
+    private get _avatarNotFoundElement(): HTMLElement { return this.shadowRoot.querySelector("ce-avatar-not-found") as HTMLElement; }
+
 }
 
 customElements.define(`ce-avatar-rotator`,AvatarRotatorComponent);

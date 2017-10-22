@@ -1,6 +1,7 @@
 ﻿import { validatePagePropertiesAndGetSkipCount } from "./validate-page-properties-and-get-skip-count";
 import { PagingConfig } from "./paging-config.model";
 import { PagedList } from "./paged-list.model";
+import { IPagedList } from "./paged-list.model";
 
 export function toPageListFromInMemory<T>(entities: Array<T>, page: number, pageSize: number): IPagedList<T> {
     if (entities == null)

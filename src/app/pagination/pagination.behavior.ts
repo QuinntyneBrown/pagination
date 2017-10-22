@@ -1,5 +1,6 @@
 import { toPageListFromInMemory } from "./to-paged-list-from-in-memory";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { IPagedList } from "./paged-list.model";
 
 export const PAGE_LIST_MODEL_CHANGED = "PAGING_MODEL_CHANGED";
 
