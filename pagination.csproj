@@ -138,6 +138,7 @@
     <TypeScriptCompile Include="src\app\avatars\avatar-filter-input.component.ts">
       <DependentUpon>avatar-filter-input.component.html</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\avatars\avatar-rotator-pager.component.ts" />
     <TypeScriptCompile Include="src\app\avatars\avatar-rotator-slide.component.ts">
       <DependentUpon>avatar-rotator-slide.component.html</DependentUpon>
     </TypeScriptCompile>

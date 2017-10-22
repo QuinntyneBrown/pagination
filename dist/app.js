@@ -171,7 +171,7 @@ var DebugContext = (function () {
 /* unused harmony reexport resolveForwardRef */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__injector__ = __webpack_require__(27);
 /* unused harmony reexport Injector */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reflective_injector__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reflective_injector__ = __webpack_require__(69);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__reflective_injector__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reflective_provider__ = __webpack_require__(30);
 /* unused harmony reexport ResolvedReflectiveFactory */
@@ -209,7 +209,7 @@ var DebugContext = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__create_ioc_container__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__create_ioc_container__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_injection_js__ = __webpack_require__(1);
 
 
@@ -240,7 +240,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(49);
+var Subject_1 = __webpack_require__(48);
 var ObjectUnsubscribedError_1 = __webpack_require__(20);
 /**
  * @class BehaviorSubject<T>
@@ -289,70 +289,70 @@ exports.BehaviorSubject = BehaviorSubject;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_or_update__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_or_update__ = __webpack_require__(76);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__append_to_body_async__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__append_to_body_async__ = __webpack_require__(77);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__append_to_target_async__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__append_to_target_async__ = __webpack_require__(78);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__camel_case_to_snake_case__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__camel_case_to_snake_case__ = __webpack_require__(79);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__camel_case_to_snake_case__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__constants__ = __webpack_require__(34);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__create_element__ = __webpack_require__(35);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__debounce__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__debounce__ = __webpack_require__(80);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__extend_css_async__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__extend_css_async__ = __webpack_require__(81);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__form_encode__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__form_encode__ = __webpack_require__(82);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__guid__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__guid__ = __webpack_require__(83);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__http__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__http__ = __webpack_require__(84);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__insert_after__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__insert_after__ = __webpack_require__(85);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__is_array__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__is_array__ = __webpack_require__(86);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__is_numeric__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__is_numeric__ = __webpack_require__(87);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__load_style__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__load_style__ = __webpack_require__(88);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__log__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__log__ = __webpack_require__(89);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__logger__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__logger__ = __webpack_require__(90);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pluck_out__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pluck_out__ = __webpack_require__(91);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pluck__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pluck__ = __webpack_require__(92);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__position__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__position__ = __webpack_require__(93);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__rectangle__ = __webpack_require__(37);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__remove_element__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__remove_element__ = __webpack_require__(94);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ruler__ = __webpack_require__(36);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__set_opacity_async__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__set_opacity_async__ = __webpack_require__(95);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__space__ = __webpack_require__(38);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__storage__ = __webpack_require__(40);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_25__storage__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_25__storage__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__store__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__store__ = __webpack_require__(96);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__target_value__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__target_value__ = __webpack_require__(97);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__template__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__template__ = __webpack_require__(98);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__translate_x__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__translate_x__ = __webpack_require__(99);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__translate_xy__ = __webpack_require__(39);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__wait__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__wait__ = __webpack_require__(100);
 /* unused harmony namespace reexport */
 
 
@@ -475,12 +475,12 @@ exports.root = _root;
 
 "use strict";
 
-var isArray_1 = __webpack_require__(52);
-var isObject_1 = __webpack_require__(53);
+var isArray_1 = __webpack_require__(51);
+var isObject_1 = __webpack_require__(52);
 var isFunction_1 = __webpack_require__(17);
-var tryCatch_1 = __webpack_require__(54);
+var tryCatch_1 = __webpack_require__(53);
 var errorObject_1 = __webpack_require__(18);
-var UnsubscriptionError_1 = __webpack_require__(55);
+var UnsubscriptionError_1 = __webpack_require__(54);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -905,13 +905,13 @@ var _globalKeyRegistry = new KeyRegistry();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__link_component__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__link_component__ = __webpack_require__(101);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__route__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__route__ = __webpack_require__(102);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router_middleware__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router_middleware__ = __webpack_require__(103);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_outlet__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_outlet__ = __webpack_require__(104);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__router_outlet__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(14);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_4__router__["a"]; });
@@ -1047,16 +1047,19 @@ Router = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__ = __webpack_require__(45);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__avatar_filter_input_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_slide_component__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__avatar_rotator_pager_component__ = __webpack_require__(57);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_rotator_component__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_rotator_slide_component__ = __webpack_require__(59);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_model__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__avatar_rotator_component__ = __webpack_require__(62);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__avatar_service__ = __webpack_require__(25);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__avatar_service__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__avatar_model__ = __webpack_require__(68);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__avatar_service__ = __webpack_require__(25);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__avatar_service__["a"]; });
+
 
 
 
@@ -1410,13 +1413,13 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__paged_list_model__ = __webpack_require__(22);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paginated_component__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paginated_component__ = __webpack_require__(63);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__paginated_component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__paging_config_model__ = __webpack_require__(23);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__to_paged_list_from_in_memory__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__to_paged_list_from_in_memory__ = __webpack_require__(64);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__to_paged_list_from_in_memory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__to_paged_list__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__to_paged_list__ = __webpack_require__(65);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__validate_page_properties_and_get_skip_count__ = __webpack_require__(24);
 /* unused harmony namespace reexport */
@@ -2164,7 +2167,7 @@ function wrappedError(message, originalError) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = resolveReflectiveProviders;
 /* unused harmony export mergeResolvedReflectiveProviders */
 /* unused harmony export constructDependencies */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflection_reflection__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflection_reflection__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_type__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forward_ref__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__injection_token__ = __webpack_require__(33);
@@ -2426,7 +2429,7 @@ function isType(v) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reflector; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflector_reader__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflector_reader__ = __webpack_require__(72);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -2823,7 +2826,7 @@ class AppRouterOutletComponent extends __WEBPACK_IMPORTED_MODULE_0__router__["b"
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app__ = __webpack_require__(44);
 
 
 
@@ -2832,7 +2835,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
+/* WEBPACK VAR INJECTION */(function(global) {/*! *****************************************************************************
 Copyright (C) Microsoft. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
@@ -2850,21 +2853,21 @@ var Reflect;
 (function (Reflect) {
     "use strict";
     var hasOwn = Object.prototype.hasOwnProperty;
+    // feature test for Object.create support
+    var supportsCreate = typeof Object.create === "function";
+    // feature test for __proto__ support
+    var supportsProto = { __proto__: [] } instanceof Array;
     // feature test for Symbol support
     var supportsSymbol = typeof Symbol === "function";
     var toPrimitiveSymbol = supportsSymbol && typeof Symbol.toPrimitive !== "undefined" ? Symbol.toPrimitive : "@@toPrimitive";
     var iteratorSymbol = supportsSymbol && typeof Symbol.iterator !== "undefined" ? Symbol.iterator : "@@iterator";
+    // create an object in dictionary mode (a.k.a. "slow" mode in v8)
+    var createDictionary = supportsCreate ? function () { return MakeDictionary(Object.create(null)); } :
+        supportsProto ? function () { return MakeDictionary({ __proto__: null }); } :
+            function () { return MakeDictionary({}); };
     var HashMap;
     (function (HashMap) {
-        var supportsCreate = typeof Object.create === "function"; // feature test for Object.create support
-        var supportsProto = { __proto__: [] } instanceof Array; // feature test for __proto__ support
         var downLevel = !supportsCreate && !supportsProto;
-        // create an object in dictionary mode (a.k.a. "slow" mode in v8)
-        HashMap.create = supportsCreate
-            ? function () { return MakeDictionary(Object.create(null)); }
-            : supportsProto
-                ? function () { return MakeDictionary({ __proto__: null }); }
-                : function () { return MakeDictionary({}); };
         HashMap.has = downLevel
             ? function (map, key) { return hasOwn.call(map, key); }
             : function (map, key) { return key in map; };
@@ -2874,19 +2877,17 @@ var Reflect;
     })(HashMap || (HashMap = {}));
     // Load global or shim versions of Map, Set, and WeakMap
     var functionPrototype = Object.getPrototypeOf(Function);
-    var usePolyfill = typeof process === "object" && process.env && process.env["REFLECT_METADATA_USE_MAP_POLYFILL"] === "true";
-    var _Map = !usePolyfill && typeof Map === "function" && typeof Map.prototype.entries === "function" ? Map : CreateMapPolyfill();
-    var _Set = !usePolyfill && typeof Set === "function" && typeof Set.prototype.entries === "function" ? Set : CreateSetPolyfill();
-    var _WeakMap = !usePolyfill && typeof WeakMap === "function" ? WeakMap : CreateWeakMapPolyfill();
+    var _Map = typeof Map === "function" && typeof Map.prototype.entries === "function" ? Map : CreateMapPolyfill();
+    var _Set = typeof Set === "function" && typeof Set.prototype.entries === "function" ? Set : CreateSetPolyfill();
+    var _WeakMap = typeof WeakMap === "function" ? WeakMap : CreateWeakMapPolyfill();
     // [[Metadata]] internal slot
-    // https://rbuckton.github.io/reflect-metadata/#ordinary-object-internal-methods-and-internal-slots
     var Metadata = new _WeakMap();
     /**
       * Applies a set of decorators to a property of a target object.
       * @param decorators An array of decorators.
       * @param target The target object.
-      * @param propertyKey (Optional) The property key to decorate.
-      * @param attributes (Optional) The property descriptor for the target key.
+      * @param targetKey (Optional) The property key to decorate.
+      * @param targetDescriptor (Optional) The property descriptor for the target key
       * @remarks Decorators are applied in reverse order.
       * @example
       *
@@ -2920,18 +2921,18 @@ var Reflect;
       *             Object.getOwnPropertyDescriptor(Example.prototype, "method")));
       *
       */
-    function decorate(decorators, target, propertyKey, attributes) {
-        if (!IsUndefined(propertyKey)) {
+    function decorate(decorators, target, targetKey, targetDescriptor) {
+        if (!IsUndefined(targetKey)) {
             if (!IsArray(decorators))
                 throw new TypeError();
             if (!IsObject(target))
                 throw new TypeError();
-            if (!IsObject(attributes) && !IsUndefined(attributes) && !IsNull(attributes))
+            if (!IsObject(targetDescriptor) && !IsUndefined(targetDescriptor) && !IsNull(targetDescriptor))
                 throw new TypeError();
-            if (IsNull(attributes))
-                attributes = undefined;
-            propertyKey = ToPropertyKey(propertyKey);
-            return DecorateProperty(decorators, target, propertyKey, attributes);
+            if (IsNull(targetDescriptor))
+                targetDescriptor = undefined;
+            targetKey = ToPropertyKey(targetKey);
+            return DecorateProperty(decorators, target, targetKey, targetDescriptor);
         }
         else {
             if (!IsArray(decorators))
@@ -2942,8 +2943,6 @@ var Reflect;
         }
     }
     Reflect.decorate = decorate;
-    // 4.1.2 Reflect.metadata(metadataKey, metadataValue)
-    // https://rbuckton.github.io/reflect-metadata/#reflect.metadata
     /**
       * A default metadata decorator factory that can be used on a class, class member, or parameter.
       * @param metadataKey The key for the metadata entry.
@@ -2985,12 +2984,18 @@ var Reflect;
       *
       */
     function metadata(metadataKey, metadataValue) {
-        function decorator(target, propertyKey) {
-            if (!IsObject(target))
-                throw new TypeError();
-            if (!IsUndefined(propertyKey) && !IsPropertyKey(propertyKey))
-                throw new TypeError();
-            OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, propertyKey);
+        function decorator(target, targetKey) {
+            if (!IsUndefined(targetKey)) {
+                if (!IsObject(target))
+                    throw new TypeError();
+                targetKey = ToPropertyKey(targetKey);
+                OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey);
+            }
+            else {
+                if (!IsConstructor(target))
+                    throw new TypeError();
+                OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, /*targetKey*/ undefined);
+            }
         }
         return decorator;
     }
@@ -3000,7 +3005,7 @@ var Reflect;
       * @param metadataKey A key used to store and retrieve metadata.
       * @param metadataValue A value that contains attached metadata.
       * @param target The target object on which to define metadata.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @example
       *
       *     class Example {
@@ -3034,19 +3039,19 @@ var Reflect;
       *     }
       *
       */
-    function defineMetadata(metadataKey, metadataValue, target, propertyKey) {
+    function defineMetadata(metadataKey, metadataValue, target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey);
     }
     Reflect.defineMetadata = defineMetadata;
     /**
       * Gets a value indicating whether the target object or its prototype chain has the provided metadata key defined.
       * @param metadataKey A key used to store and retrieve metadata.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns `true` if the metadata key was defined on the target object or its prototype chain; otherwise, `false`.
       * @example
       *
@@ -3076,19 +3081,19 @@ var Reflect;
       *     result = Reflect.hasMetadata("custom:annotation", Example.prototype, "method");
       *
       */
-    function hasMetadata(metadataKey, target, propertyKey) {
+    function hasMetadata(metadataKey, target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryHasMetadata(metadataKey, target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryHasMetadata(metadataKey, target, targetKey);
     }
     Reflect.hasMetadata = hasMetadata;
     /**
       * Gets a value indicating whether the target object has the provided metadata key defined.
       * @param metadataKey A key used to store and retrieve metadata.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns `true` if the metadata key was defined on the target object; otherwise, `false`.
       * @example
       *
@@ -3118,19 +3123,19 @@ var Reflect;
       *     result = Reflect.hasOwnMetadata("custom:annotation", Example.prototype, "method");
       *
       */
-    function hasOwnMetadata(metadataKey, target, propertyKey) {
+    function hasOwnMetadata(metadataKey, target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryHasOwnMetadata(metadataKey, target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryHasOwnMetadata(metadataKey, target, targetKey);
     }
     Reflect.hasOwnMetadata = hasOwnMetadata;
     /**
       * Gets the metadata value for the provided metadata key on the target object or its prototype chain.
       * @param metadataKey A key used to store and retrieve metadata.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns The metadata value for the metadata key if found; otherwise, `undefined`.
       * @example
       *
@@ -3160,19 +3165,19 @@ var Reflect;
       *     result = Reflect.getMetadata("custom:annotation", Example.prototype, "method");
       *
       */
-    function getMetadata(metadataKey, target, propertyKey) {
+    function getMetadata(metadataKey, target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryGetMetadata(metadataKey, target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryGetMetadata(metadataKey, target, targetKey);
     }
     Reflect.getMetadata = getMetadata;
     /**
       * Gets the metadata value for the provided metadata key on the target object.
       * @param metadataKey A key used to store and retrieve metadata.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns The metadata value for the metadata key if found; otherwise, `undefined`.
       * @example
       *
@@ -3202,18 +3207,18 @@ var Reflect;
       *     result = Reflect.getOwnMetadata("custom:annotation", Example.prototype, "method");
       *
       */
-    function getOwnMetadata(metadataKey, target, propertyKey) {
+    function getOwnMetadata(metadataKey, target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryGetOwnMetadata(metadataKey, target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryGetOwnMetadata(metadataKey, target, targetKey);
     }
     Reflect.getOwnMetadata = getOwnMetadata;
     /**
       * Gets the metadata keys defined on the target object or its prototype chain.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns An array of unique metadata keys.
       * @example
       *
@@ -3243,18 +3248,18 @@ var Reflect;
       *     result = Reflect.getMetadataKeys(Example.prototype, "method");
       *
       */
-    function getMetadataKeys(target, propertyKey) {
+    function getMetadataKeys(target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryMetadataKeys(target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryMetadataKeys(target, targetKey);
     }
     Reflect.getMetadataKeys = getMetadataKeys;
     /**
       * Gets the unique metadata keys defined on the target object.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns An array of unique metadata keys.
       * @example
       *
@@ -3284,19 +3289,19 @@ var Reflect;
       *     result = Reflect.getOwnMetadataKeys(Example.prototype, "method");
       *
       */
-    function getOwnMetadataKeys(target, propertyKey) {
+    function getOwnMetadataKeys(target, targetKey) {
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        return OrdinaryOwnMetadataKeys(target, propertyKey);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        return OrdinaryOwnMetadataKeys(target, targetKey);
     }
     Reflect.getOwnMetadataKeys = getOwnMetadataKeys;
     /**
       * Deletes the metadata entry from the target object with the provided key.
       * @param metadataKey A key used to store and retrieve metadata.
       * @param target The target object on which the metadata is defined.
-      * @param propertyKey (Optional) The property key for the target.
+      * @param targetKey (Optional) The property key for the target.
       * @returns `true` if the metadata entry was found and deleted; otherwise, false.
       * @example
       *
@@ -3326,12 +3331,13 @@ var Reflect;
       *     result = Reflect.deleteMetadata("custom:annotation", Example.prototype, "method");
       *
       */
-    function deleteMetadata(metadataKey, target, propertyKey) {
+    function deleteMetadata(metadataKey, target, targetKey) {
+        // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#deletemetadata-metadatakey-p-
         if (!IsObject(target))
             throw new TypeError();
-        if (!IsUndefined(propertyKey))
-            propertyKey = ToPropertyKey(propertyKey);
-        var metadataMap = GetOrCreateMetadataMap(target, propertyKey, /*Create*/ false);
+        if (!IsUndefined(targetKey))
+            targetKey = ToPropertyKey(targetKey);
+        var metadataMap = GetOrCreateMetadataMap(target, targetKey, /*create*/ false);
         if (IsUndefined(metadataMap))
             return false;
         if (!metadataMap.delete(metadataKey))
@@ -3339,7 +3345,7 @@ var Reflect;
         if (metadataMap.size > 0)
             return true;
         var targetMetadata = Metadata.get(target);
-        targetMetadata.delete(propertyKey);
+        targetMetadata.delete(targetKey);
         if (targetMetadata.size > 0)
             return true;
         Metadata.delete(target);
@@ -3387,8 +3393,10 @@ var Reflect;
         }
         return metadataMap;
     }
-    // 3.1.1.1 OrdinaryHasMetadata(MetadataKey, O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinaryhasmetadata
+    // Ordinary Object Internal Methods and Internal Slots
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinary-object-internal-methods-and-internal-slots
+    // OrdinaryHasMetadata(MetadataKey, O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinaryhasmetadata--metadatakey-o-p-
     function OrdinaryHasMetadata(MetadataKey, O, P) {
         var hasOwn = OrdinaryHasOwnMetadata(MetadataKey, O, P);
         if (hasOwn)
@@ -3398,16 +3406,16 @@ var Reflect;
             return OrdinaryHasMetadata(MetadataKey, parent, P);
         return false;
     }
-    // 3.1.2.1 OrdinaryHasOwnMetadata(MetadataKey, O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinaryhasownmetadata
+    // OrdinaryHasOwnMetadata(MetadataKey, O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinaryhasownmetadata--metadatakey-o-p-
     function OrdinaryHasOwnMetadata(MetadataKey, O, P) {
-        var metadataMap = GetOrCreateMetadataMap(O, P, /*Create*/ false);
+        var metadataMap = GetOrCreateMetadataMap(O, P, /*create*/ false);
         if (IsUndefined(metadataMap))
             return false;
         return ToBoolean(metadataMap.has(MetadataKey));
     }
-    // 3.1.3.1 OrdinaryGetMetadata(MetadataKey, O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinarygetmetadata
+    // OrdinaryGetMetadata(MetadataKey, O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinarygetmetadata--metadatakey-o-p-
     function OrdinaryGetMetadata(MetadataKey, O, P) {
         var hasOwn = OrdinaryHasOwnMetadata(MetadataKey, O, P);
         if (hasOwn)
@@ -3417,22 +3425,22 @@ var Reflect;
             return OrdinaryGetMetadata(MetadataKey, parent, P);
         return undefined;
     }
-    // 3.1.4.1 OrdinaryGetOwnMetadata(MetadataKey, O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinarygetownmetadata
+    // OrdinaryGetOwnMetadata(MetadataKey, O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinarygetownmetadata--metadatakey-o-p-
     function OrdinaryGetOwnMetadata(MetadataKey, O, P) {
-        var metadataMap = GetOrCreateMetadataMap(O, P, /*Create*/ false);
+        var metadataMap = GetOrCreateMetadataMap(O, P, /*create*/ false);
         if (IsUndefined(metadataMap))
             return undefined;
         return metadataMap.get(MetadataKey);
     }
-    // 3.1.5.1 OrdinaryDefineOwnMetadata(MetadataKey, MetadataValue, O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinarydefineownmetadata
+    // OrdinaryDefineOwnMetadata(MetadataKey, MetadataValue, O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinarydefineownmetadata--metadatakey-metadatavalue-o-p-
     function OrdinaryDefineOwnMetadata(MetadataKey, MetadataValue, O, P) {
-        var metadataMap = GetOrCreateMetadataMap(O, P, /*Create*/ true);
+        var metadataMap = GetOrCreateMetadataMap(O, P, /*create*/ true);
         metadataMap.set(MetadataKey, MetadataValue);
     }
-    // 3.1.6.1 OrdinaryMetadataKeys(O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinarymetadatakeys
+    // OrdinaryMetadataKeys(O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinarymetadatakeys--o-p-
     function OrdinaryMetadataKeys(O, P) {
         var ownKeys = OrdinaryOwnMetadataKeys(O, P);
         var parent = OrdinaryGetPrototypeOf(O);
@@ -3463,37 +3471,42 @@ var Reflect;
         }
         return keys;
     }
-    // 3.1.7.1 OrdinaryOwnMetadataKeys(O, P)
-    // https://rbuckton.github.io/reflect-metadata/#ordinaryownmetadatakeys
+    // OrdinaryOwnMetadataKeys(O, P)
+    // https://github.com/rbuckton/ReflectDecorators/blob/master/spec/metadata.md#ordinaryownmetadatakeys--o-p-
     function OrdinaryOwnMetadataKeys(O, P) {
+        var metadataMap = GetOrCreateMetadataMap(O, P, /*create*/ false);
         var keys = [];
-        var metadataMap = GetOrCreateMetadataMap(O, P, /*Create*/ false);
         if (IsUndefined(metadataMap))
             return keys;
         var keysObj = metadataMap.keys();
         var iterator = GetIterator(keysObj);
-        var k = 0;
         while (true) {
             var next = IteratorStep(iterator);
-            if (!next) {
-                keys.length = k;
-                return keys;
-            }
-            var nextValue = IteratorValue(next);
             try {
-                keys[k] = nextValue;
+                if (!next)
+                    return keys;
+                var nextValue = IteratorValue(next);
+                keys.push(nextValue);
             }
             catch (e) {
                 try {
-                    IteratorClose(iterator);
+                    if (next) {
+                        next = false;
+                        IteratorClose(iterator);
+                    }
                 }
                 finally {
                     throw e;
                 }
             }
-            k++;
+            finally {
+                if (next)
+                    IteratorClose(iterator);
+            }
         }
     }
+    // ECMAScript Specification
+    // https://tc39.github.io/ecma262/
     // 6 ECMAScript Data Typ0es and Values
     // https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values
     function Type(x) {
@@ -3625,15 +3638,6 @@ var Reflect;
     function IsConstructor(argument) {
         // NOTE: This is an approximation as we cannot check for [[Construct]] internal method.
         return typeof argument === "function";
-    }
-    // 7.2.7 IsPropertyKey(argument)
-    // https://tc39.github.io/ecma262/#sec-ispropertykey
-    function IsPropertyKey(argument) {
-        switch (Type(argument)) {
-            case 3 /* String */: return true;
-            case 4 /* Symbol */: return true;
-            default: return false;
-        }
     }
     // 7.3 Operations on Objects
     // https://tc39.github.io/ecma262/#sec-operations-on-objects
@@ -3807,15 +3811,15 @@ var Reflect;
             Map.prototype["@@iterator"] = function () { return this.entries(); };
             Map.prototype[iteratorSymbol] = function () { return this.entries(); };
             Map.prototype._find = function (key, insert) {
-                if (this._cacheKey !== key) {
-                    this._cacheIndex = this._keys.indexOf(this._cacheKey = key);
-                }
-                if (this._cacheIndex < 0 && insert) {
-                    this._cacheIndex = this._keys.length;
+                if (this._cacheKey === key)
+                    return this._cacheIndex;
+                var index = this._keys.indexOf(key);
+                if (index < 0 && insert) {
+                    index = this._keys.length;
                     this._keys.push(key);
                     this._values.push(undefined);
                 }
-                return this._cacheIndex;
+                return this._cacheKey = key, this._cacheIndex = index;
             };
             return Map;
         }());
@@ -3855,7 +3859,7 @@ var Reflect;
     // naive WeakMap shim
     function CreateWeakMapPolyfill() {
         var UUID_SIZE = 16;
-        var keys = HashMap.create();
+        var keys = createDictionary();
         var rootKey = CreateUniqueKey();
         return (function () {
             function WeakMap() {
@@ -3896,7 +3900,7 @@ var Reflect;
             if (!hasOwn.call(target, rootKey)) {
                 if (!create)
                     return undefined;
-                Object.defineProperty(target, rootKey, { value: HashMap.create() });
+                Object.defineProperty(target, rootKey, { value: createDictionary() });
             }
             return target[rootKey];
         }
@@ -3957,218 +3961,28 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(44), __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatars__ = __webpack_require__(15);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__landing__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__landing__ = __webpack_require__(73);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination__ = __webpack_require__(21);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router__ = __webpack_require__(13);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared__ = __webpack_require__(107);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utilities__ = __webpack_require__(4);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_router_outlet_component__ = __webpack_require__(41);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(115);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__environment__ = __webpack_require__(5);
 /* unused harmony reexport namespace */
@@ -4184,7 +3998,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4199,8 +4013,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const template = document.createElement("template");
-const html = __webpack_require__(47);
-const css = __webpack_require__(48);
+const html = __webpack_require__(46);
+const css = __webpack_require__(47);
 
 const AVATARS_FILTER_INPUT_TEXT_CHANGED = "[Avatars] Filter Input Text Changed";
 /* harmony export (immutable) */ __webpack_exports__["a"] = AVATARS_FILTER_INPUT_TEXT_CHANGED;
@@ -4261,19 +4075,19 @@ customElements.define(`ce-avatar-filter-input`, AvatarFilterInputComponent);
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = "<h2>\r\n    Filter Avatars By Name\r\n</h2>\r\n<input type=\"text\" placeholder=\"Filter Avatars By Name...\" />";
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n    user-select:none;\r\n    display:block;\r\n}\r\n\r\nh2 {\r\n    margin: 0px 0px 20px 20px;\r\n}\r\n\r\ninput {\r\n    width: calc(100% - 84px);\r\n    line-height: 3em;\r\n    padding: 0px 20px 0px 20px;\r\n    margin:0px 20px 0px 20px;\r\n}"
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4283,11 +4097,11 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Observable_1 = __webpack_require__(50);
+var Observable_1 = __webpack_require__(49);
 var Subscriber_1 = __webpack_require__(16);
 var Subscription_1 = __webpack_require__(8);
 var ObjectUnsubscribedError_1 = __webpack_require__(20);
-var SubjectSubscription_1 = __webpack_require__(57);
+var SubjectSubscription_1 = __webpack_require__(56);
 var rxSubscriber_1 = __webpack_require__(9);
 /**
  * @class SubjectSubscriber<T>
@@ -4447,14 +4261,14 @@ exports.AnonymousSubject = AnonymousSubject;
 //# sourceMappingURL=Subject.js.map
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var root_1 = __webpack_require__(7);
-var toSubscriber_1 = __webpack_require__(51);
-var observable_1 = __webpack_require__(56);
+var toSubscriber_1 = __webpack_require__(50);
+var observable_1 = __webpack_require__(55);
 /**
  * A representation of any set of values over any amount of time. This is the most basic building block
  * of RxJS.
@@ -4709,7 +4523,7 @@ exports.Observable = Observable;
 //# sourceMappingURL=Observable.js.map
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4735,7 +4549,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4744,7 +4558,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4756,7 +4570,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4781,7 +4595,7 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4812,7 +4626,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4844,7 +4658,7 @@ exports.$$observable = exports.observable;
 //# sourceMappingURL=observable.js.map
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4890,7 +4704,620 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
+/* 57 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lit_html__ = __webpack_require__(58);
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+class AvatarRotatorPagerComponent extends HTMLElement {
+    constructor() {
+        super();
+    }
+    static get observedAttributes() {
+        return [];
+    }
+    connectedCallback() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.attachShadow({ mode: 'open' });
+            if (!this.hasAttribute('role'))
+                this.setAttribute('role', 'avatarrotatorpager');
+            this.render(__WEBPACK_IMPORTED_MODULE_0_lit_html__["a" /* html */] `
+            <style>
+                :host {
+                    display:block;
+                    margin: 30px 0px;
+                    width: 100%;
+                    user-select:none;
+                }
+
+                .previous, .current-page-container, .next {
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+                    width: 32%;
+                    text-align: center;
+                }
+            </style>
+
+            <a class="previous">Previous</a>
+            <span class="current-page-container">
+                <a class="current-page"></a>/<a class="total-pages"></a>
+            </span>
+            <a class="next">Next</a>
+        `);
+            this._bind();
+            this._setEventListeners();
+        });
+    }
+    render(templateResult) {
+        Object(__WEBPACK_IMPORTED_MODULE_0_lit_html__["b" /* render */])(templateResult, this.shadowRoot);
+    }
+    _bind() {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    _setEventListeners() {
+    }
+    disconnectedCallback() {
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        switch (name) {
+            default:
+                break;
+        }
+    }
+    get _currentPageElement() { return this.shadowRoot.querySelector(".current-page"); }
+    get _totalPagesElement() { return this.shadowRoot.querySelector(".total-pages"); }
+}
+/* unused harmony export AvatarRotatorPagerComponent */
+
+customElements.define(`ce-avatar-rotator-pager`, AvatarRotatorPagerComponent);
+
+
+/***/ }),
 /* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = render;
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+/**
+ * TypeScript has a problem with precompiling templates literals
+ * https://github.com/Microsoft/TypeScript/issues/17956
+ *
+ * TODO(justinfagnani): Run tests compiled to ES5 with both Babel and
+ * TypeScript to verify correctness.
+ */
+const envCachesTemplates = ((t) => t() === t())(() => ((s) => s) ``);
+// The first argument to JS template tags retain identity across multiple
+// calls to a tag for the same literal, so we can cache work done per literal
+// in a Map.
+const templates = new Map();
+const svgTemplates = new Map();
+/**
+ * Interprets a template literal as an HTML template that can efficiently
+ * render to and update a container.
+ */
+const html = (strings, ...values) => litTag(strings, values, templates, false);
+/* harmony export (immutable) */ __webpack_exports__["a"] = html;
+
+/**
+ * Interprets a template literal as an SVG template that can efficiently
+ * render to and update a container.
+ */
+const svg = (strings, ...values) => litTag(strings, values, svgTemplates, true);
+/* unused harmony export svg */
+
+function litTag(strings, values, templates, isSvg) {
+    const key = envCachesTemplates ?
+        strings :
+        strings.join('{{--uniqueness-workaround--}}');
+    let template = templates.get(key);
+    if (template === undefined) {
+        template = new Template(strings, isSvg);
+        templates.set(key, template);
+    }
+    return new TemplateResult(template, values);
+}
+/**
+ * The return type of `html`, which holds a Template and the values from
+ * interpolated expressions.
+ */
+class TemplateResult {
+    constructor(template, values) {
+        this.template = template;
+        this.values = values;
+    }
+}
+/* unused harmony export TemplateResult */
+
+/**
+ * Renders a template to a container.
+ *
+ * To update a container with new values, reevaluate the template literal and
+ * call `render` with the new result.
+ */
+function render(result, container, partCallback = defaultPartCallback) {
+    let instance = container.__templateInstance;
+    // Repeat render, just call update()
+    if (instance !== undefined && instance.template === result.template &&
+        instance._partCallback === partCallback) {
+        instance.update(result.values);
+        return;
+    }
+    // First render, create a new TemplateInstance and append it
+    instance = new TemplateInstance(result.template, partCallback);
+    container.__templateInstance = instance;
+    const fragment = instance._clone();
+    instance.update(result.values);
+    let child;
+    while ((child = container.lastChild)) {
+        container.removeChild(child);
+    }
+    container.appendChild(fragment);
+}
+/**
+ * An expression marker with embedded unique key to avoid
+ * https://github.com/PolymerLabs/lit-html/issues/62
+ */
+const attributeMarker = `{{lit-${Math.random()}}}`;
+/**
+ * Regex to scan the string preceding an expression to see if we're in a text
+ * context, and not an attribute context.
+ *
+ * This works by seeing if we have a `>` not followed by a `<`. If there is a
+ * `<` closer to the end of the strings, then we're inside a tag.
+ */
+const textRegex = />[^<]*$/;
+const hasTagsRegex = /[^<]*/;
+const textMarkerContent = '_-lit-html-_';
+const textMarker = `<!--${textMarkerContent}-->`;
+const attrOrTextRegex = new RegExp(`${attributeMarker}|${textMarker}`);
+/**
+ * A placeholder for a dynamic expression in an HTML template.
+ *
+ * There are two built-in part types: AttributePart and NodePart. NodeParts
+ * always represent a single dynamic expression, while AttributeParts may
+ * represent as many expressions are contained in the attribute.
+ *
+ * A Template's parts are mutable, so parts can be replaced or modified
+ * (possibly to implement different template semantics). The contract is that
+ * parts can only be replaced, not removed, added or reordered, and parts must
+ * always consume the correct number of values in their `update()` method.
+ *
+ * TODO(justinfagnani): That requirement is a little fragile. A
+ * TemplateInstance could instead be more careful about which values it gives
+ * to Part.update().
+ */
+class TemplatePart {
+    constructor(type, index, name, rawName, strings) {
+        this.type = type;
+        this.index = index;
+        this.name = name;
+        this.rawName = rawName;
+        this.strings = strings;
+    }
+}
+/* unused harmony export TemplatePart */
+
+class Template {
+    constructor(strings, svg = false) {
+        this.parts = [];
+        this.svg = svg;
+        this.element = document.createElement('template');
+        this.element.innerHTML = this._getHtml(strings, svg);
+        // Edge needs all 4 parameters present; IE11 needs 3rd parameter to be null
+        const walker = document.createTreeWalker(this.element.content, 133 /* NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT |
+               NodeFilter.SHOW_TEXT */, null, false);
+        let index = -1;
+        let partIndex = 0;
+        const nodesToRemove = [];
+        // The actual previous node, accounting for removals: if a node is removed
+        // it will never be the previousNode.
+        let previousNode;
+        // Used to set previousNode at the top of the loop.
+        let currentNode;
+        while (walker.nextNode()) {
+            index++;
+            previousNode = currentNode;
+            const node = currentNode = walker.currentNode;
+            if (node.nodeType === 1 /* Node.ELEMENT_NODE */) {
+                if (!node.hasAttributes()) {
+                    continue;
+                }
+                const attributes = node.attributes;
+                for (let i = 0; i < attributes.length; i++) {
+                    const attribute = attributes.item(i);
+                    const attributeStrings = attribute.value.split(attrOrTextRegex);
+                    if (attributeStrings.length > 1) {
+                        // Get the template literal section leading up to the first
+                        // expression in this attribute attribute
+                        const attributeString = strings[partIndex];
+                        // Trim the trailing literal value if this is an interpolation
+                        const rawNameString = attributeString.substring(0, attributeString.length - attributeStrings[0].length);
+                        // Find the attribute name
+                        const rawName = rawNameString.match(/((?:\w|[.\-_$])+)=["']?$/)[1];
+                        this.parts.push(new TemplatePart('attribute', index, attribute.name, rawName, attributeStrings));
+                        node.removeAttribute(attribute.name);
+                        partIndex += attributeStrings.length - 1;
+                        i--;
+                    }
+                }
+            }
+            else if (node.nodeType === 3 /* Node.TEXT_NODE */) {
+                const nodeValue = node.nodeValue;
+                const strings = nodeValue.split(attributeMarker);
+                if (strings.length > 1) {
+                    const parent = node.parentNode;
+                    const lastIndex = strings.length - 1;
+                    // We have a part for each match found
+                    partIndex += lastIndex;
+                    // We keep this current node, but reset its content to the last
+                    // literal part. We insert new literal nodes before this so that the
+                    // tree walker keeps its position correctly.
+                    node.textContent = strings[lastIndex];
+                    // Generate a new text node for each literal section
+                    // These nodes are also used as the markers for node parts
+                    for (let i = 0; i < lastIndex; i++) {
+                        parent.insertBefore(document.createTextNode(strings[i]), node);
+                        this.parts.push(new TemplatePart('node', index++));
+                    }
+                }
+                else {
+                    // Strip whitespace-only nodes, only between elements, or at the
+                    // beginning or end of elements.
+                    const previousSibling = node.previousSibling;
+                    const nextSibling = node.nextSibling;
+                    if ((previousSibling === null ||
+                        previousSibling.nodeType === 1 /* Node.ELEMENT_NODE */) &&
+                        (nextSibling === null ||
+                            nextSibling.nodeType === 1 /* Node.ELEMENT_NODE */) &&
+                        nodeValue.trim() === '') {
+                        nodesToRemove.push(node);
+                        currentNode = previousNode;
+                        index--;
+                    }
+                }
+            }
+            else if (node.nodeType === 8 /* Node.COMMENT_NODE */ &&
+                node.nodeValue === textMarkerContent) {
+                const parent = node.parentNode;
+                // If we don't have a previous node add a marker node.
+                // If the previousSibling is removed, because it's another part
+                // placholder, or empty text, add a marker node.
+                if (node.previousSibling === null ||
+                    node.previousSibling !== previousNode) {
+                    parent.insertBefore(new Text(), node);
+                }
+                else {
+                    index--;
+                }
+                this.parts.push(new TemplatePart('node', index++));
+                nodesToRemove.push(node);
+                // If we don't have a next node add a marker node.
+                // We don't have to check if the next node is going to be removed,
+                // because that node will induce a marker if so.
+                if (node.nextSibling === null) {
+                    parent.insertBefore(new Text(), node);
+                }
+                else {
+                    index--;
+                }
+                currentNode = previousNode;
+                partIndex++;
+            }
+        }
+        // Remove text binding nodes after the walk to not disturb the TreeWalker
+        for (const n of nodesToRemove) {
+            n.parentNode.removeChild(n);
+        }
+    }
+    /**
+     * Returns a string of HTML used to create a <template> element.
+     */
+    _getHtml(strings, svg) {
+        const l = strings.length;
+        const a = [];
+        let isTextBinding = false;
+        for (let i = 0; i < l - 1; i++) {
+            const s = strings[i];
+            a.push(s);
+            // We're in a text position if the previous string matches the
+            // textRegex. If it doesn't and the previous string has no tags, then
+            // we use the previous text position state.
+            isTextBinding = s.match(textRegex) !== null ||
+                (s.match(hasTagsRegex) !== null && isTextBinding);
+            a.push(isTextBinding ? textMarker : attributeMarker);
+        }
+        a.push(strings[l - 1]);
+        const html = a.join('');
+        return svg ? `<svg>${html}</svg>` : html;
+    }
+}
+/* unused harmony export Template */
+
+const getValue = (part, value) => {
+    // `null` as the value of a Text node will render the string 'null'
+    // so we convert it to undefined
+    if (value != null && value.__litDirective === true) {
+        value = value(part);
+    }
+    return value === null ? undefined : value;
+};
+/* unused harmony export getValue */
+
+const directive = (f) => {
+    f.__litDirective = true;
+    return f;
+};
+/* unused harmony export directive */
+
+class AttributePart {
+    constructor(instance, element, name, strings) {
+        this.instance = instance;
+        this.element = element;
+        this.name = name;
+        this.strings = strings;
+        this.size = strings.length - 1;
+    }
+    setValue(values, startIndex) {
+        const strings = this.strings;
+        let text = '';
+        for (let i = 0; i < strings.length; i++) {
+            text += strings[i];
+            if (i < strings.length - 1) {
+                const v = getValue(this, values[startIndex + i]);
+                if (v &&
+                    (Array.isArray(v) || typeof v !== 'string' && v[Symbol.iterator])) {
+                    for (const t of v) {
+                        // TODO: we need to recursively call getValue into iterables...
+                        text += t;
+                    }
+                }
+                else {
+                    text += v;
+                }
+            }
+        }
+        this.element.setAttribute(this.name, text);
+    }
+}
+/* unused harmony export AttributePart */
+
+class NodePart {
+    constructor(instance, startNode, endNode) {
+        this.instance = instance;
+        this.startNode = startNode;
+        this.endNode = endNode;
+        this._previousValue = undefined;
+    }
+    setValue(value) {
+        value = getValue(this, value);
+        if (value === null ||
+            !(typeof value === 'object' || typeof value === 'function')) {
+            // Handle primitive values
+            // If the value didn't change, do nothing
+            if (value === this._previousValue) {
+                return;
+            }
+            this._setText(value);
+        }
+        else if (value instanceof TemplateResult) {
+            this._setTemplateResult(value);
+        }
+        else if (Array.isArray(value) || value[Symbol.iterator]) {
+            this._setIterable(value);
+        }
+        else if (value instanceof Node) {
+            this._setNode(value);
+        }
+        else if (value.then !== undefined) {
+            this._setPromise(value);
+        }
+        else {
+            // Fallback, will render the string representation
+            this._setText(value);
+        }
+    }
+    _insert(node) {
+        this.endNode.parentNode.insertBefore(node, this.endNode);
+    }
+    _setNode(value) {
+        this.clear();
+        this._insert(value);
+        this._previousValue = value;
+    }
+    _setText(value) {
+        const node = this.startNode.nextSibling;
+        if (node === this.endNode.previousSibling &&
+            node.nodeType === Node.TEXT_NODE) {
+            // If we only have a single text node between the markers, we can just
+            // set its value, rather than replacing it.
+            // TODO(justinfagnani): Can we just check if _previousValue is
+            // primitive?
+            node.textContent = value;
+        }
+        else {
+            this._setNode(document.createTextNode(value === undefined ? '' : value));
+        }
+        this._previousValue = value;
+    }
+    _setTemplateResult(value) {
+        let instance;
+        if (this._previousValue &&
+            this._previousValue.template === value.template) {
+            instance = this._previousValue;
+        }
+        else {
+            instance =
+                new TemplateInstance(value.template, this.instance._partCallback);
+            this._setNode(instance._clone());
+            this._previousValue = instance;
+        }
+        instance.update(value.values);
+    }
+    _setIterable(value) {
+        // For an Iterable, we create a new InstancePart per item, then set its
+        // value to the item. This is a little bit of overhead for every item in
+        // an Iterable, but it lets us recurse easily and efficiently update Arrays
+        // of TemplateResults that will be commonly returned from expressions like:
+        // array.map((i) => html`${i}`), by reusing existing TemplateInstances.
+        // If _previousValue is an array, then the previous render was of an
+        // iterable and _previousValue will contain the NodeParts from the previous
+        // render. If _previousValue is not an array, clear this part and make a new
+        // array for NodeParts.
+        if (!Array.isArray(this._previousValue)) {
+            this.clear();
+            this._previousValue = [];
+        }
+        // Lets us keep track of how many items we stamped so we can clear leftover
+        // items from a previous render
+        const itemParts = this._previousValue;
+        let partIndex = 0;
+        for (const item of value) {
+            // Try to reuse an existing part
+            let itemPart = itemParts[partIndex];
+            // If no existing part, create a new one
+            if (itemPart === undefined) {
+                // If we're creating the first item part, it's startNode should be the
+                // container's startNode
+                let itemStart = this.startNode;
+                // If we're not creating the first part, create a new separator marker
+                // node, and fix up the previous part's endNode to point to it
+                if (partIndex > 0) {
+                    const previousPart = itemParts[partIndex - 1];
+                    itemStart = previousPart.endNode = document.createTextNode('');
+                    this._insert(itemStart);
+                }
+                itemPart = new NodePart(this.instance, itemStart, this.endNode);
+                itemParts.push(itemPart);
+            }
+            itemPart.setValue(item);
+            partIndex++;
+        }
+        if (partIndex === 0) {
+            this.clear();
+            this._previousValue = undefined;
+        }
+        else if (partIndex < itemParts.length) {
+            const lastPart = itemParts[partIndex - 1];
+            // Truncate the parts array so _previousValue reflects the current state
+            itemParts.length = partIndex;
+            this.clear(lastPart.endNode.previousSibling);
+            lastPart.endNode = this.endNode;
+        }
+    }
+    _setPromise(value) {
+        value.then((v) => {
+            if (this._previousValue === value) {
+                this.setValue(v);
+            }
+        });
+        this._previousValue = value;
+    }
+    clear(startNode = this.startNode) {
+        let node;
+        while ((node = startNode.nextSibling) !== this.endNode) {
+            node.parentNode.removeChild(node);
+        }
+    }
+}
+/* unused harmony export NodePart */
+
+const defaultPartCallback = (instance, templatePart, node) => {
+    if (templatePart.type === 'attribute') {
+        return new AttributePart(instance, node, templatePart.name, templatePart.strings);
+    }
+    else if (templatePart.type === 'node') {
+        return new NodePart(instance, node, node.nextSibling);
+    }
+    throw new Error(`Unknown part type ${templatePart.type}`);
+};
+/* unused harmony export defaultPartCallback */
+
+/**
+ * An instance of a `Template` that can be attached to the DOM and updated
+ * with new values.
+ */
+class TemplateInstance {
+    constructor(template, partCallback = defaultPartCallback) {
+        this._parts = [];
+        this.template = template;
+        this._partCallback = partCallback;
+    }
+    update(values) {
+        let valueIndex = 0;
+        for (const part of this._parts) {
+            if (part.size === undefined) {
+                part.setValue(values[valueIndex]);
+                valueIndex++;
+            }
+            else {
+                part.setValue(values, valueIndex);
+                valueIndex += part.size;
+            }
+        }
+    }
+    _clone() {
+        const fragment = document.importNode(this.template.element.content, true);
+        if (this.template.parts.length > 0) {
+            // Edge needs all 4 parameters present; IE11 needs 3rd parameter to be
+            // null
+            const walker = document.createTreeWalker(fragment, 133 /* NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT */, null, false);
+            const parts = this.template.parts;
+            let index = 0;
+            let partIndex = 0;
+            let templatePart = parts[0];
+            let node = walker.nextNode();
+            while (node != null && partIndex < parts.length) {
+                if (index === templatePart.index) {
+                    this._parts.push(this._partCallback(this, templatePart, node));
+                    templatePart = parts[++partIndex];
+                }
+                else {
+                    index++;
+                    node = walker.nextNode();
+                }
+            }
+        }
+        if (this.template.svg) {
+            const svgElement = fragment.firstChild;
+            fragment.removeChild(svgElement);
+            const nodes = svgElement.childNodes;
+            for (let i = 0; i < nodes.length; i++) {
+                fragment.appendChild(nodes.item(i));
+            }
+        }
+        return fragment;
+    }
+}
+/* unused harmony export TemplateInstance */
+
+//# sourceMappingURL=lit-html.js.map
+
+/***/ }),
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4906,8 +5333,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 
 const template = document.createElement("template");
-const html = __webpack_require__(59);
-const styles = __webpack_require__(60);
+const html = __webpack_require__(60);
+const styles = __webpack_require__(61);
 class AvatarRotatorSlideComponent extends HTMLElement {
     constructor() {
         super();
@@ -4950,19 +5377,19 @@ customElements.define(`ce-avatar-rotator-slide`, AvatarRotatorSlideComponent);
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = "<h3></h3>\r\n<img />";
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n    display:block;\r\n    user-select:none;\r\n}\r\n\r\nimg {\r\n    display: block;\r\n    margin: 0 auto;\r\n}"
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4971,8 +5398,8 @@ module.exports = ":host {\r\n    display:block;\r\n    user-select:none;\r\n}\r\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
 
 
-const template = __webpack_require__(65);
-const styles = __webpack_require__(66);
+const template = __webpack_require__(66);
+const styles = __webpack_require__(67);
 class AvatarRotatorComponent extends __WEBPACK_IMPORTED_MODULE_0__pagination__["a" /* PaginatedComponent */] {
     constructor() {
         super(1, 1, ".next", ".previous");
@@ -5032,7 +5459,7 @@ customElements.define(`ce-avatar-rotator`, AvatarRotatorComponent);
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5099,7 +5526,7 @@ class PaginatedComponent extends HTMLElement {
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5121,7 +5548,7 @@ function toPageListFromInMemory(entities, page, pageSize) {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5132,19 +5559,19 @@ function toPageList(query, page, pageSize) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Avatar Rotator</h2>\r\n\r\n<div class=\"container\"></div>\r\n\r\n<section>\r\n    <a class=\"previous\">Previous</a>\r\n    <span class=\"current-page-container\">\r\n        <a class=\"current-page\"></a>/<a class=\"total-pages\"></a>\r\n    </span>\r\n    <a class=\"next\">Next</a>\r\n</section>";
+module.exports = "<h2>Avatar Rotator</h2>\r\n\r\n<div class=\"container\"></div>\r\n\r\n<section>\r\n    <a class=\"previous\">Previous</a>\r\n    <span class=\"current-page-container\">\r\n        <a class=\"current-page\"></a>/<a class=\"total-pages\"></a>\r\n    </span>\r\n    <a class=\"next\">Next</a>\r\n</section>\r\n\r\n<ce-avatar-rotator-pager></ce-avatar-rotator-pager>";
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n    display: grid;\r\n    grid-template-columns: 1fr;\r\n    grid-template-rows: 3em 250px 20px;\r\n    grid-gap: 0px;\r\n    user-select: none;\r\n}\r\n\r\nh2 {\r\n    text-align: center;   \r\n}\r\n\r\nh2 span {\r\n    font-size:0.75em;\r\n    font-weight:100;\r\n    font-style:italic;\r\n}\r\n\r\nimg {\r\n    display:block;\r\n    margin:0 auto;\r\n}\r\n\r\n.next,\r\n.previous {\r\n    cursor: pointer;\r\n}\r\n\r\n.container {\r\n    padding:0;\r\n    width: 100%;\r\n    height: 200px;\r\n    display: block;\r\n    margin: 0;\r\n    text-align: center;\r\n}\r\n\r\nsection {\r\n    margin: 30px 0px;\r\n    width: 100%;\r\n    user-select:none;\r\n}\r\n\r\nsection .previous, section .current-page-container, section .next {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: inline-block;\r\n    width: 32%;\r\n    text-align: center;\r\n}"
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5155,7 +5582,7 @@ class Avatar {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5506,12 +5933,12 @@ function _mapProviders(injector, fn) {
 //# sourceMappingURL=reflective_injector.js.map
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return reflector; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflection_capabilities__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflection_capabilities__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__reflector__ = __webpack_require__(32);
 /* unused harmony reexport Reflector */
 /**
@@ -5532,7 +5959,7 @@ var reflector = new __WEBPACK_IMPORTED_MODULE_1__reflector__["a" /* Reflector */
 //# sourceMappingURL=reflection.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5774,7 +6201,7 @@ function getParentCtor(ctor) {
 //# sourceMappingURL=reflection_capabilities.js.map
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5798,17 +6225,17 @@ var ReflectorReader = (function () {
 //# sourceMappingURL=reflector_reader.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__landing_page_component__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__landing_page_component__ = __webpack_require__(74);
 /* unused harmony reexport namespace */
 
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5824,8 +6251,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 
 
-const template = __webpack_require__(104);
-const styles = __webpack_require__(105);
+const template = __webpack_require__(105);
+const styles = __webpack_require__(106);
 class LandingPageComponent extends HTMLElement {
     constructor(_avatarService = __WEBPACK_IMPORTED_MODULE_1__container__["a" /* Container */].resolve(__WEBPACK_IMPORTED_MODULE_0__avatars__["b" /* AvatarService */])) {
         super();
@@ -5855,7 +6282,7 @@ customElements.define(`ce-landing-page`, LandingPageComponent);
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5879,7 +6306,7 @@ const createIocContainer = () => [
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5901,7 +6328,7 @@ const addOrUpdate = (options) => {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5916,7 +6343,7 @@ const appendToBodyAsync = (options) => {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5931,7 +6358,7 @@ const appendToTargetAsync = (options) => {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5941,7 +6368,7 @@ const camelCaseToSnakeCase = (value) => value.replace(/\W+/g, '-').replace(/([a-
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5977,7 +6404,7 @@ function debounce(func, wait, immediate) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5992,7 +6419,7 @@ const extendCssAsync = (options) => {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6008,7 +6435,7 @@ const formEncode = (data) => {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6025,7 +6452,7 @@ function guid() {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6052,7 +6479,7 @@ Http._callbacks = [];
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6064,7 +6491,7 @@ const insertAfter = (newNode, referenceNode) => {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6074,7 +6501,7 @@ const isArray = (value) => value.constructor === Array;
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6086,7 +6513,7 @@ const isNumeric = (n) => {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6113,7 +6540,7 @@ const loadStyle = (css, selector) => {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6137,7 +6564,7 @@ function Log() {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6153,7 +6580,7 @@ function Logger(target) {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6170,7 +6597,7 @@ const pluckOut = (options) => {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6188,7 +6615,7 @@ const pluck = (options) => {
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6246,7 +6673,7 @@ class Position {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6261,7 +6688,7 @@ const removeElement = (options) => {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6281,7 +6708,7 @@ var setOpacityAsync = (options) => {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6322,7 +6749,7 @@ class Store {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6332,7 +6759,7 @@ const targetValue = ($event) => $event.target.value;
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6357,7 +6784,7 @@ class Template {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6369,7 +6796,7 @@ const translateX = (element, value) => {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6379,7 +6806,7 @@ const wait = (ms) => new Promise(r => setTimeout(r, ms));
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6441,7 +6868,7 @@ customElements.define(`ce-link`, LinkComponent);
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6452,7 +6879,7 @@ class Route {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6463,7 +6890,7 @@ class RouterMiddleware {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6531,27 +6958,27 @@ class RouterOutlet {
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports) {
 
 module.exports = "<ce-avatar-filter-input></ce-avatar-filter-input>\r\n<ce-avatar-rotator></ce-avatar-rotator>";
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports) {
 
 module.exports = ":host{\r\n    display:block;\r\n}\r\n\r\nce-avatar-filter-input {\r\n    margin: 0px 0px 40px 0px;\r\n}"
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__electron_service__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__electron_service__ = __webpack_require__(108);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_component__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_component__ = __webpack_require__(109);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_component__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_component__ = __webpack_require__(112);
 /* unused harmony reexport namespace */
 
 
@@ -6559,7 +6986,7 @@ module.exports = ":host{\r\n    display:block;\r\n}\r\n\r\nce-avatar-filter-inpu
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6580,12 +7007,12 @@ class ElectronService {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const template = __webpack_require__(109);
-const styles = __webpack_require__(110);
+const template = __webpack_require__(110);
+const styles = __webpack_require__(111);
 class FooterComponent extends HTMLElement {
     constructor() {
         super();
@@ -6618,24 +7045,24 @@ customElements.define(`ce-footer`, FooterComponent);
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports) {
 
 module.exports = "<div>\r\n</div>\r\n";
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n\tdisplay:block;\r\n}\r\n"
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const template = __webpack_require__(112);
-const styles = __webpack_require__(113);
+const template = __webpack_require__(113);
+const styles = __webpack_require__(114);
 class HeaderComponent extends HTMLElement {
     constructor() {
         super();
@@ -6668,26 +7095,26 @@ customElements.define(`ce-header`, HeaderComponent);
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports) {
 
 module.exports = "<div>\r\n</div>\r\n";
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n\tdisplay:block;\r\n}\r\n"
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_router_outlet_component__ = __webpack_require__(41);
 
-const template = __webpack_require__(115);
-const styles = __webpack_require__(116);
+const template = __webpack_require__(116);
+const styles = __webpack_require__(117);
 class AppComponent extends HTMLElement {
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
@@ -6703,13 +7130,13 @@ customElements.define(`ce-app`, AppComponent);
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container\">\r\n    <ce-header></ce-header>\r\n    <div class=\"router-outlet\"></div>\r\n    <ce-footer></ce-footer>\r\n</div>";
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports) {
 
 module.exports = ":host {\r\n    display:block;\r\n    height:100vh;   \r\n    width:540px;\r\n    margin:0 auto;\r\n}\r\n\r\n.container {\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.router-outlet {\r\n    display: block;\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n    width:100%;\r\n    max-width: 100%;\r\n}"
