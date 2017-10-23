@@ -20,6 +20,7 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
         this.onNext = this.onNext.bind(this);
         this.onPrevious = this.onPrevious.bind(this);
         this.onEntitiesChanged = this.onEntitiesChanged.bind(this);
+        this.onPagerClick = this.onPagerClick.bind(this);
     }
 
     public onNext(e: Event) { /* Pagination Behavior */ }
@@ -72,6 +73,7 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     public onPagedListModelChange(pagedList: any) { this.render(); }
 
     public render() {                
+        alert(JSON.stringify(this.pagedList));
         this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
         this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
         this._pagerElement.setAttribute("paged-list", JSON.stringify(this.pagedList));
@@ -91,6 +93,10 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
         for (let i = 0; i < this._containerElement.children.length; i++) {
             this._containerElement.children[i].setAttribute("avatar-filter-value", value);
         }
+    }
+
+    onPagerClick(e: any) {
+
     }
 
     attributeChangedCallback(name, oldValue, newValue) {

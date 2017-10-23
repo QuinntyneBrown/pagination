@@ -28,31 +28,10 @@ export abstract class PaginationBehavior<T> extends HTMLElement {
         this.onPagedListModelChange(this.pagedList);
     }
 
-    public onNext(e: Event) {        
+    public onPagerClick(e: any) {
         e.stopPropagation();
+        alert(JSON.stringify(e.detail));
 
-        if (this.pageNumber == this.pagedList.totalPages) {
-            this.pageNumber = 1;
-        } else {
-            this.pageNumber = this.pageNumber + 1;
-        }
-
-        this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
-
-        this.onPagedListModelChange(this.pagedList);
+        this.pagedList = toPageListFromInMemory(this.entities, e.detail.currentPage, this.pageSize);
     }
-
-    public onPrevious(e: Event) {
-        e.stopPropagation();
-
-        if (this.pageNumber == 1) {
-            this.pageNumber = this.pagedList.totalPages;
-        } else {
-            this.pageNumber = this.pageNumber - 1;
-        }
-
-        this.pagedList = toPageListFromInMemory(this.entities, this.pageNumber, this.pageSize);
-
-        this.onPagedListModelChange(this.pagedList);
-    }    
 }

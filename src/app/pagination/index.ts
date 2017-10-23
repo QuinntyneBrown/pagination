@@ -2,8 +2,6 @@ export * from "./filter.behavior";
 export * from "./paged-list.model";
 export * from "./pager.behavior";
 export * from "./pagination.behavior";
-export * from "./pager.component";
-export * from "./paginated.component";
 export * from "./paging-config.model";
 export * from "./to-paged-list-from-in-memory";
 export * from "./to-paged-list";

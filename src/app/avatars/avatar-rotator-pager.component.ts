@@ -14,37 +14,25 @@ export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBeh
     static get observedAttributes () {
         return [
             "current-page",
-            "total-pages",
-            "paged-list"
+            "total-pages"
         ];
     }
-
-    public pagedList: any;
     
-    public totalPages: any;
 
     async connectedCallback() {    
         this.attachShadow({ mode: 'open' });
 
         if (!this.hasAttribute('role'))
             this.setAttribute('role', 'avatarrotatorpager');
-
         this.render(this._templateResult);
-
-        this._bind();
-        this._setEventListeners();
+        this._setEventListeners();        
     }
 
     public render(templateResult: TemplateResult) {
         render(templateResult, this.shadowRoot);
     }
 
-    private async _bind() {
-        this.currentPage$.subscribe(x => this.render(this._templateResult));
-
-        this.totalPages$.subscribe(x => this.render(this._templateResult));
-    }
-
+    
     private get _templateResult(): TemplateResult {
 
         return html`
@@ -67,7 +55,7 @@ export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBeh
 
             <a class="previous">Previous</a>
             <span class="current-page-container">
-                <a class="current-page">${this.currentPage$.value}</a>/<a class="total-pages">${this.totalPages$.value}</a>
+                <a class="current-page">${this.currentPage}</a>/<a class="total-pages">${this.totalPages}</a>
             </span>
             <a class="next">Next</a>
         `;
@@ -78,13 +66,18 @@ export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBeh
         this._previousElement.addEventListener("click", this.onPrevious);
     }
 
+    disconnectedCallback() {
+        this._nextElement.removeEventListener("click", this.onNext);
+        this._previousElement.removeEventListener("click", this.onPrevious);
+    }
+
     public onNext(e) { }
 
     public onPrevious(e) { }
 
-    public totalPages$: BehaviorSubject<string> = new BehaviorSubject("");
+    public totalPages: number;
 
-    public currentPage$: BehaviorSubject<number> = new BehaviorSubject(0);
+    public currentPage: number;
 
     private get _previousElement(): HTMLElement { return this.shadowRoot.querySelector(".previous") as HTMLElement; }
 
@@ -93,16 +86,15 @@ export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBeh
     attributeChangedCallback (name, oldValue, newValue) {
         switch (name) {
             case "total-pages":
-                this.totalPages$.next(newValue);
+                this.totalPages = Number(newValue);
+                if (this.parentNode) this.render(this._templateResult);
                 break;
 
             case "current-page":
-                this.currentPage$.next(newValue);
+                this.currentPage = Number(newValue);
+                if (this.parentNode) this.render(this._templateResult);
                 break;
-
-            case "paged-list":
-                this.pagedList = JSON.parse(newValue);
-                break;
+                
         }
     }    
 }

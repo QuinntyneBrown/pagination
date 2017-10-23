@@ -8,18 +8,23 @@ export abstract class PagerBehavior extends HTMLElement {
     public onNext(e: Event) {
         e.stopPropagation();
         
-        if (this.currentPage$.value == this.pagedList.totalPages) {
-            this.currentPage$.next(1);
+        if (this.currentPage == this.totalPages) {
+            this.currentPage = 1;
         } else {
-            this.currentPage$.next(this.currentPage$.value + 1);
+            this.currentPage = this.currentPage + 1;
         }
 
-        
-        this.pagedList = toPageListFromInMemory(this.pagedList.entities, this.currentPage$.value, this.pagedList.pageSize);
+        alert(JSON.stringify({
+            detail: {
+                direction: "next",
+                currentPage: this.currentPage
+            }
+        }));
 
         this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
             detail: {
-                pagedList: this.pagedList
+                direction: "next",
+                currentPage: this.currentPage
             },
             bubbles: true,
             cancelable: false,
@@ -30,26 +35,27 @@ export abstract class PagerBehavior extends HTMLElement {
     public onPrevious(e: Event) {
         e.stopPropagation();
 
-        if (this.currentPage$.value == 1) {
-            this.currentPage$.next(this.pagedList.totalPages);
+        if (this.currentPage == 1) {
+            this.currentPage = this.totalPages;
         } else {
-            this.currentPage$.next(this.currentPage$.value - 1);
+            this.currentPage = this.currentPage - 1;
         }
-
-        this.pagedList = toPageListFromInMemory(this.pagedList.entities, this.currentPage$.value, this.pagedList.pageSize);
         
         this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
             detail: {
-                pagedList: this.pagedList,
-                currentPage: this.currentPage$.value
+                direction: "previous",
+                currentPage: this.currentPage
             },
             bubbles: true,
             cancelable: false,
             composed:true
         } as CustomEventInit));
     }
-
-    public abstract pagedList: PagedList;
     
-    public abstract currentPage$: BehaviorSubject<number>;    
+    public abstract currentPage: number;    
+
+    public abstract totalPages: number;
 }
+
+
+

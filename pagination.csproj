@@ -7,8 +7,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{57DB8F84-D269-42DF-B7DF-2A5085908BB2}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -23,8 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -100,9 +98,6 @@
       <DependentUpon>landing-page.component.html</DependentUpon>
     </Content>
     <Content Include="src\app\landing\landing-page.component.html" />
-    <Content Include="src\app\pagination\pager.component.css">
-      <DependentUpon>pager.component.html</DependentUpon>
-    </Content>
     <Content Include="src\app\shared\footer.component.css">
       <DependentUpon>footer.component.html</DependentUpon>
     </Content>
@@ -133,7 +128,6 @@
     </None>
     <Content Include="src\app\avatars\avatar-filter-input.component.html" />
     <Content Include="src\app\avatars\avatar-rotator-slide.component.html" />
-    <Content Include="src\app\pagination\pager.component.html" />
     <Content Include="src\app\avatars\avatar-not-found.component.html" />
   </ItemGroup>
   <ItemGroup>
@@ -160,12 +154,8 @@
     <TypeScriptCompile Include="src\app\landing\landing-page.component.ts">
       <DependentUpon>landing-page.component.html</DependentUpon>
     </TypeScriptCompile>
-
     <TypeScriptCompile Include="src\app\pagination\filter.behavior.ts" />
     <TypeScriptCompile Include="src\app\pagination\pager.behavior.ts" />
-    <TypeScriptCompile Include="src\app\pagination\pager.component.ts">
-      <DependentUpon>pager.component.html</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\shared\electron.service.ts" />
     <TypeScriptCompile Include="src\app\shared\footer.component.ts">
       <DependentUpon>footer.component.html</DependentUpon>
@@ -257,8 +247,7 @@
           <IISUrl>http://localhost:51305/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
