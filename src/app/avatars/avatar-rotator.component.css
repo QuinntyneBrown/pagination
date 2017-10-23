@@ -42,6 +42,6 @@ ce-avatar-not-found {
     display: none;
 }
 
-:host(.empty) ce-pager {
+:host(.empty) ce-avatar-rotator-pager {
     display: none;
 }

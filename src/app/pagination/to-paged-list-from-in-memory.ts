@@ -9,6 +9,6 @@ export function toPageListFromInMemory<T>(entities: Array<T>, page: number, page
     var pagingConfig = new PagingConfig(page, pageSize);
     var skipCount = validatePagePropertiesAndGetSkipCount(pagingConfig);
     var data = entities.slice(skipCount, pageSize + skipCount);
-    return new PagedList(data, page, pageSize, entities.length);    
+    return new PagedList(data, page, pageSize, entities.length, entities);    
 }
 

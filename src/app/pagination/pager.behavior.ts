@@ -1,6 +1,6 @@
 ﻿import { PagedList } from "./paged-list.model";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
-
+import { toPageListFromInMemory } from "./to-paged-list-from-in-memory";
 export const PAGER_CLICKED_EVENT = "PAGER_CLICKED"
 
 export abstract class PagerBehavior extends HTMLElement {
@@ -14,7 +14,17 @@ export abstract class PagerBehavior extends HTMLElement {
             this.currentPage$.next(this.currentPage$.value + 1);
         }
 
-        this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {} as CustomEventInit));
+        
+        this.pagedList = toPageListFromInMemory(this.pagedList.entities, this.currentPage$.value, this.pagedList.pageSize);
+
+        this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
+            detail: {
+                pagedList: this.pagedList
+            },
+            bubbles: true,
+            cancelable: false,
+            composed: true
+        } as CustomEventInit));
     }
 
     public onPrevious(e: Event) {
@@ -26,7 +36,17 @@ export abstract class PagerBehavior extends HTMLElement {
             this.currentPage$.next(this.currentPage$.value - 1);
         }
 
-        this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {} as CustomEventInit));
+        this.pagedList = toPageListFromInMemory(this.pagedList.entities, this.currentPage$.value, this.pagedList.pageSize);
+        
+        this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
+            detail: {
+                pagedList: this.pagedList,
+                currentPage: this.currentPage$.value
+            },
+            bubbles: true,
+            cancelable: false,
+            composed:true
+        } as CustomEventInit));
     }
 
     public abstract pagedList: PagedList;

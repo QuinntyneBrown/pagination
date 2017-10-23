@@ -1,8 +1,9 @@
 import { Avatar } from "../avatars";
-import { toPageListFromInMemory, PaginationBehavior } from "../pagination";
+import { toPageListFromInMemory, PaginationBehavior, PAGER_CLICKED_EVENT } from "../pagination";
 import { Container } from "../../container";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Mixin } from "../shared/mixin";
+import { html, render, TemplateResult } from "lit-html";
 
 const template = require("./avatar-rotator.component.html");
 const styles = require("./avatar-rotator.component.css");
@@ -55,25 +56,25 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `<style>${styles}</style>${template}`;
-        this.nextElement.addEventListener("click", this.onNext);
-        this.previousElement.addEventListener("click", this.onPrevious);
         this.bind();          
+
+        this._pagerElement.addEventListener(PAGER_CLICKED_EVENT, (e:any) => {
+            this.pagedList = e.detail.pagedList;
+            this.render();
+        });
     }
 
     public bind() {
         this._avatars$.subscribe(this.onEntitiesChanged);
-        this._avatarFilterValue$.subscribe(this.onAvatarFilterValueChanged);
-        this.entities$.subscribe(this.onEntitiesChanged);
+        this._avatarFilterValue$.subscribe(this.onAvatarFilterValueChanged);        
     }
 
     public onPagedListModelChange(pagedList: any) { this.render(); }
 
     public render() {                
-        this._totalPagesElement.textContent = JSON.stringify(this.pagedList.totalPages);
-        this._currentPageElement.textContent = JSON.stringify(this.pageNumber);
-
         this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
         this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
+        this._pagerElement.setAttribute("paged-list", JSON.stringify(this.pagedList));
 
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
@@ -105,23 +106,14 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     }
 
     disconnectedCallback() {
-        this.nextElement.removeEventListener("click", this.onNext);
-        this.previousElement.removeEventListener("click", this.onPrevious);
+
     }
-
-    private get _currentPageElement(): HTMLElement { return this.shadowRoot.querySelector(".current-page") as HTMLElement; }
-
-    private get _totalPagesElement(): HTMLElement { return this.shadowRoot.querySelector(".total-pages") as HTMLElement; }
 
     private get _containerElement(): HTMLElement { return this.shadowRoot.querySelector(".container") as HTMLElement; }    
 
     private get _headingElement(): HTMLElement { return this.shadowRoot.querySelector("h2") as HTMLElement; }
     
-    public get nextElement(): HTMLElement { return this.shadowRoot.querySelector(this.nextCssClass) as HTMLElement; }
-
-    public get previousElement(): HTMLElement { return this.shadowRoot.querySelector(this.previousCssClass) as HTMLElement; }
-
-    private get _pagerElement(): HTMLElement { return this.shadowRoot.querySelector("ce-pager") as HTMLElement; }
+    private get _pagerElement(): HTMLElement { return this.shadowRoot.querySelector("ce-avatar-rotator-pager") as HTMLElement; }
 
     private get _avatarNotFoundElement(): HTMLElement { return this.shadowRoot.querySelector("ce-avatar-not-found") as HTMLElement; }
 

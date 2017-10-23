@@ -1,17 +1,27 @@
 import { html, render, TemplateResult } from "lit-html";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { Mixin } from "../shared/mixin";
+import { PagerBehavior } from "../pagination/pager.behavior";
 
-export class AvatarRotatorPagerComponent extends HTMLElement {
+@Mixin({ baseCtors: [PagerBehavior] })
+export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBehavior {
     constructor() {
         super();
+        this.onNext = this.onNext.bind(this);
+        this.onPrevious = this.onPrevious.bind(this);
     }
 
     static get observedAttributes () {
         return [
             "current-page",
-            "total-pages"
+            "total-pages",
+            "paged-list"
         ];
     }
+
+    public pagedList: any;
+    
+    public totalPages: any;
 
     async connectedCallback() {    
         this.attachShadow({ mode: 'open' });
@@ -22,6 +32,7 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
         this.render(this._templateResult);
 
         this._bind();
+        this._setEventListeners();
     }
 
     public render(templateResult: TemplateResult) {
@@ -61,10 +72,23 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
             <a class="next">Next</a>
         `;
     }
-    
+
+    private _setEventListeners() {
+        this._nextElement.addEventListener("click", this.onNext);
+        this._previousElement.addEventListener("click", this.onPrevious);
+    }
+
+    public onNext(e) { }
+
+    public onPrevious(e) { }
+
     public totalPages$: BehaviorSubject<string> = new BehaviorSubject("");
 
-    public currentPage$: BehaviorSubject<string> = new BehaviorSubject("");
+    public currentPage$: BehaviorSubject<number> = new BehaviorSubject(0);
+
+    private get _previousElement(): HTMLElement { return this.shadowRoot.querySelector(".previous") as HTMLElement; }
+
+    private get _nextElement(): HTMLElement { return this.shadowRoot.querySelector(".next") as HTMLElement; }
 
     attributeChangedCallback (name, oldValue, newValue) {
         switch (name) {
@@ -74,6 +98,10 @@ export class AvatarRotatorPagerComponent extends HTMLElement {
 
             case "current-page":
                 this.currentPage$.next(newValue);
+                break;
+
+            case "paged-list":
+                this.pagedList = JSON.parse(newValue);
                 break;
         }
     }    
