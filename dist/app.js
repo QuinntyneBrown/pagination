@@ -65,61 +65,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Subject_1 = __webpack_require__(51);
-var ObjectUnsubscribedError_1 = __webpack_require__(21);
-/**
- * @class BehaviorSubject<T>
- */
-var BehaviorSubject = (function (_super) {
-    __extends(BehaviorSubject, _super);
-    function BehaviorSubject(_value) {
-        _super.call(this);
-        this._value = _value;
-    }
-    Object.defineProperty(BehaviorSubject.prototype, "value", {
-        get: function () {
-            return this.getValue();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    BehaviorSubject.prototype._subscribe = function (subscriber) {
-        var subscription = _super.prototype._subscribe.call(this, subscriber);
-        if (subscription && !subscription.closed) {
-            subscriber.next(this._value);
-        }
-        return subscription;
-    };
-    BehaviorSubject.prototype.getValue = function () {
-        if (this.hasError) {
-            throw this.thrownError;
-        }
-        else if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        else {
-            return this._value;
-        }
-    };
-    BehaviorSubject.prototype.next = function (value) {
-        _super.prototype.next.call(this, this._value = value);
-    };
-    return BehaviorSubject;
-}(Subject_1.Subject));
-exports.BehaviorSubject = BehaviorSubject;
-//# sourceMappingURL=BehaviorSubject.js.map
-
-/***/ }),
-/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -215,13 +160,68 @@ var DebugContext = (function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subject_1 = __webpack_require__(51);
+var ObjectUnsubscribedError_1 = __webpack_require__(20);
+/**
+ * @class BehaviorSubject<T>
+ */
+var BehaviorSubject = (function (_super) {
+    __extends(BehaviorSubject, _super);
+    function BehaviorSubject(_value) {
+        _super.call(this);
+        this._value = _value;
+    }
+    Object.defineProperty(BehaviorSubject.prototype, "value", {
+        get: function () {
+            return this.getValue();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BehaviorSubject.prototype._subscribe = function (subscriber) {
+        var subscription = _super.prototype._subscribe.call(this, subscriber);
+        if (subscription && !subscription.closed) {
+            subscriber.next(this._value);
+        }
+        return subscription;
+    };
+    BehaviorSubject.prototype.getValue = function () {
+        if (this.hasError) {
+            throw this.thrownError;
+        }
+        else if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else {
+            return this._value;
+        }
+    };
+    BehaviorSubject.prototype.next = function (value) {
+        _super.prototype.next.call(this, this._value = value);
+    };
+    return BehaviorSubject;
+}(Subject_1.Subject));
+exports.BehaviorSubject = BehaviorSubject;
+//# sourceMappingURL=BehaviorSubject.js.map
+
+/***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__metadata__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__metadata__ = __webpack_require__(10);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__metadata__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forward_ref__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forward_ref__ = __webpack_require__(11);
 /* unused harmony reexport forwardRef */
 /* unused harmony reexport resolveForwardRef */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__injector__ = __webpack_require__(30);
@@ -230,7 +230,7 @@ var DebugContext = (function () {
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__reflective_injector__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reflective_provider__ = __webpack_require__(33);
 /* unused harmony reexport ResolvedReflectiveFactory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reflective_key__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reflective_key__ = __webpack_require__(12);
 /* unused harmony reexport ReflectiveKey */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injection_token__ = __webpack_require__(36);
 /* unused harmony reexport InjectionToken */
@@ -477,9 +477,9 @@ exports.root = _root;
 
 var isArray_1 = __webpack_require__(54);
 var isObject_1 = __webpack_require__(55);
-var isFunction_1 = __webpack_require__(18);
+var isFunction_1 = __webpack_require__(17);
 var tryCatch_1 = __webpack_require__(56);
-var errorObject_1 = __webpack_require__(19);
+var errorObject_1 = __webpack_require__(18);
 var UnsubscriptionError_1 = __webpack_require__(57);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
@@ -689,28 +689,6 @@ exports.$$rxSubscriber = exports.rxSubscriber;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = toPageListFromInMemory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validate_page_properties_and_get_skip_count__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paging_config_model__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__paged_list_model__ = __webpack_require__(26);
-
-
-
-function toPageListFromInMemory(entities, page, pageSize) {
-    if (entities == null)
-        throw new Error("entities");
-    var pagingConfig = new __WEBPACK_IMPORTED_MODULE_1__paging_config_model__["a" /* PagingConfig */](page, pageSize);
-    var skipCount = Object(__WEBPACK_IMPORTED_MODULE_0__validate_page_properties_and_get_skip_count__["a" /* validatePagePropertiesAndGetSkipCount */])(pagingConfig);
-    var data = entities.slice(skipCount, pageSize + skipCount);
-    return new __WEBPACK_IMPORTED_MODULE_2__paged_list_model__["a" /* PagedList */](data, page, pageSize, entities.length, entities);
-}
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Optional; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Injectable; });
@@ -771,13 +749,13 @@ var Host = Object(__WEBPACK_IMPORTED_MODULE_0__util_decorators__["b" /* makePara
 //# sourceMappingURL=metadata.js.map
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export forwardRef */
 /* harmony export (immutable) */ __webpack_exports__["a"] = resolveForwardRef;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(0);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -827,14 +805,14 @@ function resolveForwardRef(type) {
 //# sourceMappingURL=forward_ref.js.map
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReflectiveKey; });
 /* unused harmony export KeyRegistry */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forward_ref__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forward_ref__ = __webpack_require__(11);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -923,7 +901,7 @@ var _globalKeyRegistry = new KeyRegistry();
 //# sourceMappingURL=reflective_key.js.map
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -935,7 +913,7 @@ var _globalKeyRegistry = new KeyRegistry();
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_outlet__ = __webpack_require__(110);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__router_outlet__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(14);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_4__router__["a"]; });
 
 
@@ -945,7 +923,7 @@ var _globalKeyRegistry = new KeyRegistry();
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1065,7 +1043,7 @@ Router = __decorate([
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1093,7 +1071,7 @@ Router = __decorate([
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1103,9 +1081,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isFunction_1 = __webpack_require__(18);
+var isFunction_1 = __webpack_require__(17);
 var Subscription_1 = __webpack_require__(8);
-var Observer_1 = __webpack_require__(20);
+var Observer_1 = __webpack_require__(19);
 var rxSubscriber_1 = __webpack_require__(9);
 /**
  * Implements the {@link Observer} interface and extends the
@@ -1363,7 +1341,7 @@ var SafeSubscriber = (function (_super) {
 //# sourceMappingURL=Subscriber.js.map
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1375,7 +1353,7 @@ exports.isFunction = isFunction;
 //# sourceMappingURL=isFunction.js.map
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1385,7 +1363,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1399,7 +1377,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1432,7 +1410,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1449,7 +1427,7 @@ function Mixin(options) {
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1465,12 +1443,6 @@ class PagerBehavior extends HTMLElement {
         else {
             this.currentPage = this.currentPage + 1;
         }
-        alert(JSON.stringify({
-            detail: {
-                direction: "next",
-                currentPage: this.currentPage
-            }
-        }));
         this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
             detail: {
                 direction: "next",
@@ -1505,7 +1477,79 @@ class PagerBehavior extends HTMLElement {
 
 
 /***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__filter_behavior__ = __webpack_require__(69);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paged_list_model__ = __webpack_require__(24);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pager_behavior__ = __webpack_require__(22);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__pager_behavior__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_behavior__ = __webpack_require__(70);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__pagination_behavior__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paging_config_model__ = __webpack_require__(27);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__to_paged_list_from_in_memory__ = __webpack_require__(25);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__to_paged_list_from_in_memory__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__to_paged_list__ = __webpack_require__(71);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__validate_page_properties_and_get_skip_count__ = __webpack_require__(26);
+/* unused harmony namespace reexport */
+
+
+
+
+
+
+
+
+
+
+/***/ }),
 /* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class PagedList {
+    constructor(data, page, pageSize, totalCount, entities) {
+        this.data = data;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.totalCount = totalCount;
+        this.entities = entities;
+        this.totalPages = Math.ceil(this.totalCount / this.pageSize);
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = PagedList;
+
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = toPageListFromInMemory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validate_page_properties_and_get_skip_count__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paging_config_model__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__paged_list_model__ = __webpack_require__(24);
+
+
+
+function toPageListFromInMemory(entities, page, pageSize) {
+    if (entities == null)
+        throw new Error("entities");
+    var pagingConfig = new __WEBPACK_IMPORTED_MODULE_1__paging_config_model__["a" /* PagingConfig */](page, pageSize);
+    var skipCount = Object(__WEBPACK_IMPORTED_MODULE_0__validate_page_properties_and_get_skip_count__["a" /* validatePagePropertiesAndGetSkipCount */])(pagingConfig);
+    var data = entities.slice(skipCount, pageSize + skipCount);
+    return new __WEBPACK_IMPORTED_MODULE_2__paged_list_model__["a" /* PagedList */](data, page, pageSize, entities.length, entities);
+}
+
+
+/***/ }),
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1525,7 +1569,7 @@ function validatePagePropertiesAndGetSkipCount(pagingConfig) {
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1536,56 +1580,6 @@ class PagingConfig {
     }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = PagingConfig;
-
-
-
-/***/ }),
-/* 26 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-class PagedList {
-    constructor(data, page, pageSize, totalCount, entities) {
-        this.data = data;
-        this.page = page;
-        this.pageSize = pageSize;
-        this.totalCount = totalCount;
-        this.entities = entities;
-        this.totalPages = Math.ceil(this.totalCount / this.pageSize);
-    }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = PagedList;
-
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__filter_behavior__ = __webpack_require__(69);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paged_list_model__ = __webpack_require__(26);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pager_behavior__ = __webpack_require__(23);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__pager_behavior__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_behavior__ = __webpack_require__(70);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__pagination_behavior__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paging_config_model__ = __webpack_require__(25);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__to_paged_list_from_in_memory__ = __webpack_require__(10);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__to_paged_list__ = __webpack_require__(71);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__validate_page_properties_and_get_skip_count__ = __webpack_require__(24);
-/* unused harmony namespace reexport */
-
-
-
-
-
-
-
 
 
 
@@ -1632,7 +1626,7 @@ AvatarService = __decorate([
 /* harmony export (immutable) */ __webpack_exports__["a"] = makeDecorator;
 /* harmony export (immutable) */ __webpack_exports__["b"] = makeParamDecorator;
 /* unused harmony export makePropDecorator */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(0);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -1927,7 +1921,7 @@ function makePropDecorator(name, props, parentClass) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return THROW_IF_NOT_FOUND; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Injector; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(0);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -1992,7 +1986,7 @@ var Injector = (function () {
 /* harmony export (immutable) */ __webpack_exports__["g"] = outOfBoundsError;
 /* harmony export (immutable) */ __webpack_exports__["d"] = mixingMultiProvidersWithRegularProvidersError;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_errors__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_lang__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_lang__ = __webpack_require__(0);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -2270,11 +2264,11 @@ function wrappedError(message, originalError) {
 /* unused harmony export constructDependencies */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__reflection_reflection__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_type__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forward_ref__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forward_ref__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__injection_token__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__metadata__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__metadata__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reflective_errors__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reflective_key__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reflective_key__ = __webpack_require__(12);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -2902,7 +2896,7 @@ Storage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(13);
 
 class AppRouterOutletComponent extends __WEBPACK_IMPORTED_MODULE_0__router__["b" /* RouterOutlet */] {
     constructor(el) {
@@ -4069,13 +4063,13 @@ var Reflect;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatars__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatars__ = __webpack_require__(15);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__landing__ = __webpack_require__(79);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination__ = __webpack_require__(23);
 /* unused harmony reexport namespace */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router__ = __webpack_require__(13);
 /* unused harmony reexport namespace */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared__ = __webpack_require__(113);
 /* unused harmony reexport namespace */
@@ -4103,7 +4097,7 @@ var Reflect;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -4199,9 +4193,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(52);
-var Subscriber_1 = __webpack_require__(17);
+var Subscriber_1 = __webpack_require__(16);
 var Subscription_1 = __webpack_require__(8);
-var ObjectUnsubscribedError_1 = __webpack_require__(21);
+var ObjectUnsubscribedError_1 = __webpack_require__(20);
 var SubjectSubscription_1 = __webpack_require__(59);
 var rxSubscriber_1 = __webpack_require__(9);
 /**
@@ -4629,9 +4623,9 @@ exports.Observable = Observable;
 
 "use strict";
 
-var Subscriber_1 = __webpack_require__(17);
+var Subscriber_1 = __webpack_require__(16);
 var rxSubscriber_1 = __webpack_require__(9);
-var Observer_1 = __webpack_require__(20);
+var Observer_1 = __webpack_require__(19);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver) {
         if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -4676,7 +4670,7 @@ exports.isObject = isObject;
 
 "use strict";
 
-var errorObject_1 = __webpack_require__(19);
+var errorObject_1 = __webpack_require__(18);
 var tryCatchTarget;
 function tryCatcher() {
     try {
@@ -4811,8 +4805,8 @@ exports.SubjectSubscription = SubjectSubscription;
 "use strict";
 /* unused harmony export AvatarRotatorPagerComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lit_html__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_mixin__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination_pager_behavior__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_mixin__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination_pager_behavior__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4873,6 +4867,7 @@ let AvatarRotatorPagerComponent = class AvatarRotatorPagerComponent extends HTML
                     display: inline-block;
                     width: 32%;
                     text-align: center;
+                    cursor: pointer;
                 }
             </style>
 
@@ -5456,7 +5451,7 @@ class TemplateInstance {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5531,7 +5526,7 @@ module.exports = ":host {\r\n    display:block;\r\n    user-select:none;\r\n    
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_BehaviorSubject__);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5604,10 +5599,10 @@ module.exports = ":host {\r\n    display:block;\r\n    user-select:none;\r\n}\r\
 
 "use strict";
 /* unused harmony export AvatarRotatorComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pagination__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pagination__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_mixin__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_mixin__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5651,7 +5646,8 @@ let AvatarRotatorComponent = class AvatarRotatorComponent extends HTMLElement {
         this.shadowRoot.innerHTML = `<style>${styles}</style>${template}`;
         this.bind();
         this._pagerElement.addEventListener(__WEBPACK_IMPORTED_MODULE_0__pagination__["a" /* PAGER_CLICKED_EVENT */], (e) => {
-            this.pagedList = e.detail.pagedList;
+            alert(e.detail.currentPage);
+            this.pagedList = Object(__WEBPACK_IMPORTED_MODULE_0__pagination__["c" /* toPageListFromInMemory */])(this.entities, e.detail.currentPage, this.pageSize);
             this.render();
         });
     }
@@ -5661,10 +5657,8 @@ let AvatarRotatorComponent = class AvatarRotatorComponent extends HTMLElement {
     }
     onPagedListModelChange(pagedList) { this.render(); }
     render() {
-        alert(JSON.stringify(this.pagedList));
         this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
         this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
-        this._pagerElement.setAttribute("paged-list", JSON.stringify(this.pagedList));
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
             const slideElement = document.createElement("ce-avatar-rotator-slide");
@@ -5722,8 +5716,8 @@ class FilterBehavior {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__to_paged_list_from_in_memory__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__to_paged_list_from_in_memory__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
 
 
@@ -5743,7 +5737,6 @@ class PaginationBehavior extends HTMLElement {
     }
     onPagerClick(e) {
         e.stopPropagation();
-        alert(JSON.stringify(e.detail));
         this.pagedList = Object(__WEBPACK_IMPORTED_MODULE_0__to_paged_list_from_in_memory__["a" /* toPageListFromInMemory */])(this.entities, e.detail.currentPage, this.pageSize);
     }
 }
@@ -5793,9 +5786,9 @@ class Avatar {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReflectiveInjector; });
 /* unused harmony export ReflectiveInjector_ */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__injector__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__metadata__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__metadata__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reflective_errors__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reflective_key__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reflective_key__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reflective_provider__ = __webpack_require__(33);
 /**
  * @license
@@ -6169,7 +6162,7 @@ var reflector = new __WEBPACK_IMPORTED_MODULE_1__reflector__["a" /* Reflector */
 "use strict";
 /* unused harmony export DELEGATE_CTOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReflectionCapabilities; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_type__ = __webpack_require__(34);
 /**
  * @license
@@ -6443,7 +6436,7 @@ var ReflectorReader = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatars__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__avatars__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__container__ = __webpack_require__(3);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -6493,7 +6486,7 @@ customElements.define(`ce-landing-page`, LandingPageComponent);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_avatars_avatar_service__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_utilities__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_environment__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_router__ = __webpack_require__(13);
 
 
 
@@ -7014,7 +7007,7 @@ const wait = (ms) => new Promise(r => setTimeout(r, ms));
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__container__ = __webpack_require__(3);
 
 
@@ -7098,7 +7091,7 @@ class RouterMiddleware {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utilities__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__container__ = __webpack_require__(3);
 

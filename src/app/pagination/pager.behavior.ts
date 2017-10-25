@@ -13,14 +13,7 @@ export abstract class PagerBehavior extends HTMLElement {
         } else {
             this.currentPage = this.currentPage + 1;
         }
-
-        alert(JSON.stringify({
-            detail: {
-                direction: "next",
-                currentPage: this.currentPage
-            }
-        }));
-
+        
         this.dispatchEvent(new CustomEvent(PAGER_CLICKED_EVENT, {
             detail: {
                 direction: "next",

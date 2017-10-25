@@ -50,6 +50,7 @@ export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBeh
                     display: inline-block;
                     width: 32%;
                     text-align: center;
+                    cursor: pointer;
                 }
             </style>
 

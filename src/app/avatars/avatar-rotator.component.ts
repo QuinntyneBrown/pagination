@@ -59,8 +59,9 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
         this.shadowRoot.innerHTML = `<style>${styles}</style>${template}`;
         this.bind();          
 
-        this._pagerElement.addEventListener(PAGER_CLICKED_EVENT, (e:any) => {
-            this.pagedList = e.detail.pagedList;
+        this._pagerElement.addEventListener(PAGER_CLICKED_EVENT, (e: any) => {   
+            alert(e.detail.currentPage);
+            this.pagedList = toPageListFromInMemory(this.entities, e.detail.currentPage, this.pageSize);
             this.render();
         });
     }
@@ -73,11 +74,9 @@ export class AvatarRotatorComponent extends HTMLElement implements PaginationBeh
     public onPagedListModelChange(pagedList: any) { this.render(); }
 
     public render() {                
-        alert(JSON.stringify(this.pagedList));
         this._pagerElement.setAttribute("total-pages", JSON.stringify(this.pagedList.totalPages));
         this._pagerElement.setAttribute("current-page", JSON.stringify(this.pageNumber));
-        this._pagerElement.setAttribute("paged-list", JSON.stringify(this.pagedList));
-
+        
         this._containerElement.innerHTML = "";
         for (let i = 0; i < this.pagedList.data.length; i++) {
             const slideElement = document.createElement("ce-avatar-rotator-slide");

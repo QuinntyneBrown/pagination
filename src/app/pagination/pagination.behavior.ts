@@ -28,10 +28,8 @@ export abstract class PaginationBehavior<T> extends HTMLElement {
         this.onPagedListModelChange(this.pagedList);
     }
 
-    public onPagerClick(e: any) {
-        e.stopPropagation();
-        alert(JSON.stringify(e.detail));
-
+    public onPagerClick(e: any) {        
+        e.stopPropagation();        
         this.pagedList = toPageListFromInMemory(this.entities, e.detail.currentPage, this.pageSize);
     }
 }
