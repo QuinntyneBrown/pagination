@@ -3,7 +3,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Mixin } from "../shared/mixin";
 import { PagerBehavior } from "../pagination/pager.behavior";
 
-@Mixin({ baseCtors: [PagerBehavior] })
+@Mixin({ behaviors: [PagerBehavior] })
 export class AvatarRotatorPagerComponent extends HTMLElement implements PagerBehavior {
     constructor() {
         super();

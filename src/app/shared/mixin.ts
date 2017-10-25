@@ -1,6 +1,6 @@
-﻿export function Mixin(options: { baseCtors: Function[] }) {
+﻿export function Mixin(options: { behaviors: Function[] }) {
     return function (derivedCtor: Function) {
-        options.baseCtors.map(baseCtor => {
+        options.behaviors.map(baseCtor => {
             Object.getOwnPropertyNames(baseCtor.prototype).map(name => {
                 derivedCtor.prototype[name] = baseCtor.prototype[name];
             });

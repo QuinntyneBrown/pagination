@@ -8,7 +8,7 @@ import { html, render, TemplateResult } from "lit-html";
 const template = require("./avatar-rotator.component.html");
 const styles = require("./avatar-rotator.component.css");
 
-@Mixin({ baseCtors: [PaginationBehavior] })
+@Mixin({ behaviors: [PaginationBehavior] })
 export class AvatarRotatorComponent extends HTMLElement implements PaginationBehavior<any> {
     constructor() {
         super();
